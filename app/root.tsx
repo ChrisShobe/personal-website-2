@@ -17,6 +17,10 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
   },
+  {
+    rel: "stylesheet",
+    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

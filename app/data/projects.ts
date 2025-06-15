@@ -24,7 +24,7 @@ export const projects: Project[] = [  {
 {
     id: "hearo",
     title: "Hearo",
-    description: "Best Womxn in Hack Award Winner. A background safety app that listens and alerts for deaf or hard of hearing users.",
+    description: "A background safety app that listens and alerts for deaf or hard of hearing users.",
     image: "/assets/images/HearoLogo.png",
     devpost: "https://devpost.com/software/hearo-kcb80g",    github: "https://github.com/ChrisShobe/hack-for-humanity-2025",
     tags: ["Accessibility", "Machine Learning", "Python"],
@@ -64,7 +64,7 @@ export const projects: Project[] = [  {
   {
     id: "jetstream",
     title: "JetStream",
-    description: "Finalist. Plan your business trip seamlessly with real-time transit and flight data.",
+    description: "Plan your business trip seamlessly with real-time transit and flight data.",
     image: "/assets/images/jetstream.jpg",
     devpost: "https://devpost.com/software/jetstream-7pas4o",    github: "https://github.com/jordanmosakowski/inrix-hack-23",
     tags: ["React", "Flask", "API Integration"],
@@ -75,7 +75,7 @@ export const projects: Project[] = [  {
   {
     id: "parking",
     title: "Parking++",
-    description: "10th Place. Find the best parking fast with smart filters and Street View previews.",
+    description: "Find the best parking fast with smart filters and Street View previews.",
     image: "/assets/images/parking++.png",
     devpost: "https://devpost.com/software/parking-dkrpb5",    github: "https://github.com/sipneat/inrix-hack-2023",
     tags: ["Vue.js", "Flask", "Google Maps API"],

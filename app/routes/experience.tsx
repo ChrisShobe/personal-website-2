@@ -6,7 +6,7 @@ export default function Experience() {
     <div>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin-in"></i>
         </a>
         <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>

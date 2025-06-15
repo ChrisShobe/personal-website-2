@@ -11,20 +11,12 @@
   }
 }
 
-.linkbox, .link-box, .circle-image, .header-content, .about-box, .image-container, .experience-container, .experience-item, nav, h1, p, .social-icons {
+.linkbox, .link-box, .about-box, .image-container, .experience-container, .experience-item {
   animation: fadeIn 1s ease-in-out;
 }
 
 .link-box {
   animation: fadeIn 1.2s ease-in-out;
-}
-
-.social-icons {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-nav a {
-  animation: fadeIn 1s ease-in-out;
 }
 
 .linkbox {

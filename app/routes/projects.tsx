@@ -50,10 +50,9 @@ export default function Projects() {
                       <span className="badge award">{project.award}</span>
                     )}
                   </div>
-                </div>              )}
-              <div className="project-header">
-                <h3>{project.title}</h3>
+                </div>              )}              <div className="project-header">
                 <img src={project.image} alt={`${project.title} logo`} className="project-list-image" />
+                <h3>{project.title}</h3>
               </div>
               <p>{project.description}</p><div className="project-meta">
                 <div className="project-links">

@@ -76,8 +76,8 @@ export default function ProjectDetail() {
           </div>
         )}        <div className="project-detail-content">
           <div className="project-detail-header">
-            <h1>{project.title}</h1>
             <img src={project.image} alt={`${project.title} logo`} className="project-detail-title-image" />
+            <h1>{project.title}</h1>
           </div>
           
           <div className="project-meta">

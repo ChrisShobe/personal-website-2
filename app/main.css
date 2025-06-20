@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom, #000000, #2c9a8f);
+  background-color: #000000;
   min-height: 100vh;
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif !important;
 }

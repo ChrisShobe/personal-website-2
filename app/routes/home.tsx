@@ -1,8 +1,8 @@
 import "../home.css";
-import meImg from "/assets/images/me.jpg";
-import projectImg from "/assets/images/project sunset.jpg";
-import experienceImg from "/assets/images/experience sunset.jpg";
-import aboutImg from "/assets/images/about sunset.jpg";
+import meImg from "/assets/images/home/me.jpg";
+import projectImg from "/assets/images/home/project sunset.jpg";
+import experienceImg from "/assets/images/home/experience sunset.jpg";
+import aboutImg from "/assets/images/home/about sunset.jpg";
 
 const Home = () => {
   return (

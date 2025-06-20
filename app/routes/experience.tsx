@@ -1,5 +1,9 @@
 import React from "react";
-import "../home.css";
+import { Link } from "react-router";
+import { experience } from "../data/experience.js";
+import type { Experience } from "../data/experience.js";
+import "../experience.css";
+import "../project.css";
 
 export default function Experience() {
   return (
@@ -33,19 +37,31 @@ export default function Experience() {
             My professional experience and internships in technology, cybersecurity, and software development.
           </p>
         </div>
-      </div>
-
-      <div className="experience-container">
-        <div className="experience-item">
-          <h3>Experience 1</h3>
-          <p>Description of your first experience goes here.</p>
-        </div>
-        
-        <div className="experience-item">
-          <h3>Experience 2</h3>
-          <p>Description of your second experience goes here.</p>
-        </div>
-      </div>
+      </div>      <div className="projects-container">        {experience.map((exp: Experience) => (
+          <Link key={exp.id} to={`/experience/${exp.id}`} className="project-link">            <div className="project">              <div className="project-badges">
+                <div>
+                  {exp.title && (
+                    <span className="badge experience">{exp.title}</span>
+                  )}
+                </div>
+                <div>
+                  {exp.startDate && (
+                    <span className="badge date">{exp.startDate} - {exp.endDate || "Present"}</span>
+                  )}
+                </div>
+              </div><div className="project-header">
+                <img src={exp.image} alt={`${exp.company} logo`} className="project-list-image" />
+                <h3>{exp.company}</h3>
+              </div>              <div className="project-meta">
+                <div className="project-tags">
+                  {exp.tags && exp.tags.map((tag: string) => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}</div>
     </div>
   );
 }

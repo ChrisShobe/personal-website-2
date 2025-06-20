@@ -1,0 +1,203 @@
+@import "./home.css";
+
+/* Experience Detail Page Styles */
+.experience-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.experience-detail-content {
+    animation: fadeIn 1s ease-in-out;
+    padding-top: 3rem;
+    padding: 0.5rem 1rem;
+}
+
+.experience-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-detail-header h1 {
+    color: #40E0D0;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.experience-detail-title-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.experience-dates {
+    margin-bottom: 0;
+}
+
+.experience-dates .date {
+    color: #B340E0;
+    font-weight: 600;
+    font-size: 0.0rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience-tags .tag {
+    background-color: rgba(102, 255, 240, 0.2);
+    color: #66FFF0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.experience-description {
+    margin-top: 2rem;
+}
+
+.experience-description h3 {
+    color: #c0fff9;
+    margin-bottom: 1rem;
+}
+
+.experience-description p {
+    color: #ffffff;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.experience-bottom-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Experience roles section */
+.experience-roles {
+    margin-top: 2rem;
+}
+
+.experience-roles h3 {
+    color: #c0fff9;
+    margin-bottom: 1.5rem;
+}
+
+.role-item {
+    background-color: rgba(179, 64, 224, 0.1);
+    border: 1px solid rgba(179, 64, 224, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.role-header h4 {
+    color: #66FFF0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.role-date {
+    color: #B340E0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.role-description {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Badge styles for experience items */
+.project-badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge.experience {
+    background: linear-gradient(134deg, #b340e0, #40E0D0);
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(179, 64, 224, 0.3);
+}
+
+.badge.date {
+    background-color: rgba(179, 64, 224, 0.2);
+    color: #B340E0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(179, 64, 224, 0.3);
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(179, 64, 224, 0.2);
+    color: #b340e0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(179, 64, 224, 0.3);
+    color: #df8fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-detail {
+        padding: 0 1rem;
+    }
+    
+    .project-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

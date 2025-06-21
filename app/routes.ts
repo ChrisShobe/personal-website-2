@@ -7,4 +7,5 @@ export default [
   route("/experience", "routes/experience.tsx"),
   route("/experience/:experienceId", "routes/experience.$experienceId.tsx"),
   route("/about", "routes/about.tsx"),
+  route("/about/:categoryId", "routes/about.$categoryId.tsx"),
 ] satisfies RouteConfig;

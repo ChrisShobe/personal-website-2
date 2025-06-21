@@ -1,5 +1,11 @@
 import React from "react";
+import { Link } from "react-router";
+import { aboutCategories } from "../data/about.js";
+import type { AboutCategory } from "../data/about.js";
 import "../home.css";
+import "../about.css";
+import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function About() {
   return (
@@ -13,14 +19,11 @@ export default function About() {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className="fas fa-envelope"></i>
         </a>
-      </div>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-file-alt"></i>
+        </a>      </div>
         
-      <nav>
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/experience">Experience</a>
-        <a href="/about" className="current">Beyond CS</a>
-      </nav>
+      <Navigation currentPage="about" />
 
       <div className="header">
         <div className="header-content">
@@ -29,21 +32,22 @@ export default function About() {
             <span style={{ color: "#40E0D0" }}>CS</span>
           </h1>
           <p>
-            Get to know me beyond computer science - my hobbies, interests, and what makes me who I am.
+            Click on a category to explore the creative and personal passions that shape who I am beyond computer science—from music and art to photography, nature, and curiosity-driven learning.
           </p>
         </div>
+      </div>      <div className="projects-container">
+        {aboutCategories.map((category: AboutCategory) => (
+          <Link key={category.id} to={`/about/${category.id}`} className="project-link">
+            <div className="project">
+              <div className="project-header">
+                <img src={category.image} alt={`${category.title}`} className="project-list-image" />
+                <h3>{category.title}</h3>
+              </div>
+              <p>{category.description}</p>
+            </div>
+          </Link>
+        ))}
       </div>
-
-      <div className="about-content">
-        <div className="about-section">
-          <h3>Interests & Hobbies</h3>
-          <p>Content about your interests and hobbies goes here.</p>
-        </div>
-        
-        <div className="about-section">
-          <h3>Personal Values</h3>
-          <p>Content about your personal values and what drives you goes here.</p>
-        </div>      </div>
     </div>
   );
 }

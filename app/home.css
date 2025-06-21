@@ -53,13 +53,13 @@
 
 .link-box .centered {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 1rem;
+    left: 2rem;
+    transform: none;
     font-size: clamp(20px, 4vw, 35px);
     font-weight: bold;
-    color: #ffffff;
-    text-align: center;
+    color: #b0fff7;
+    text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     z-index: 2;
     pointer-events: none;
@@ -135,4 +135,78 @@
 
 .experience-item {
     animation: fadeIn 2s ease-in-out;
+}
+
+/* Mobile Responsiveness for Home Page */
+@media (max-width: 768px) {
+  .link-box {
+    width: 95vw;
+    height: 20rem;
+    margin: 0.5rem auto;
+    padding: 10px;
+  }
+  
+  .link-box .centered {
+    top: 1rem;
+    left: 1.5rem;
+    font-size: clamp(18px, 5vw, 24px);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .circle-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container img {
+    height: 300px;
+    margin: 10px;
+  }
+  
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-box {
+    width: 98vw;
+    height: 18rem;
+    margin: 0.25rem auto;
+    padding: 8px;
+  }
+  
+  .link-box .centered {
+    top: 0.75rem;
+    left: 1rem;
+    font-size: clamp(16px, 6vw, 20px);
+  }
+  
+  .circle-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .image-container img {
+    height: 250px;
+    margin: 8px;
+  }
+  
+  .experience-container {
+    padding: 0 0.5rem;
+    gap: 12px;
+  }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import { projects } from "../data/projects";
 import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function Projects() {
   return (
@@ -15,14 +16,11 @@ export default function Projects() {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className="fas fa-envelope"></i>
         </a>
-      </div>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-file-alt"></i>
+        </a>      </div>
         
-      <nav>
-        <a href="/">Home</a>
-        <a href="/projects" className="current">Projects</a>
-        <a href="/experience">Experience</a>
-        <a href="/about">Beyond CS</a>
-      </nav>
+      <Navigation currentPage="projects" />
 
       <div className="header">
         <div className="header-content">
@@ -31,7 +29,7 @@ export default function Projects() {
             <span style={{ color: "#40E0D0" }}>Projects</span>
           </h1>
           <p>
-            Here are some of the projects I've worked on, showcasing my skills in software development, web technologies, and problem-solving.
+            Click on a project to learn more and explore how I’ve used design, AI, and full-stack development to build real-world solutions. View the GitHub repo and Devposts if available.
           </p>
         </div>
       </div>

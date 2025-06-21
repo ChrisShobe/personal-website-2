@@ -1,8 +1,9 @@
 import "../home.css";
 import meImg from "/assets/images/home/me.jpg";
-import projectImg from "/assets/images/home/project sunset.jpg";
-import experienceImg from "/assets/images/home/experience sunset.jpg";
-import aboutImg from "/assets/images/home/about sunset.jpg";
+import projectImg from "/assets/images/home/projects.jpg";
+import experienceImg from "/assets/images/home/experience.jpg";
+import aboutImg from "/assets/images/home/about.jpg";
+import Navigation from "../components/Navigation.js";
 
 const Home = () => {
   return (
@@ -17,14 +18,12 @@ const Home = () => {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className = "fas fa-envelope"></i>
         </a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i className = "fas fa-file-alt"></i>
+        </a>
       </div>
         
-      <nav>
-        <a href="/" className="current">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/experience">Experience</a>
-        <a href="/about">Beyond CS</a>
-      </nav>
+      <Navigation currentPage="home" />
 
       <div className="header">
         <div className="header-content">
@@ -36,8 +35,7 @@ const Home = () => {
               <span style={{ color: "#40E0D0" }}>Chris Shobe</span>
             </h1>
             <p>
-              <br />
-              I'm a student at Santa Clara University with a passion for using technology to make a positive impact. 
+              I'm a rising junior at Santa Clara University studying Computer Science and Engineering with a Marketing minor, passionate about building inclusive, impactful tech through software, cybersecurity, and full-stack development.
             </p>
           </div>
         </div>
@@ -60,7 +58,7 @@ const Home = () => {
       <a href="/about">
         <div className="link-box">
           <img src={aboutImg} alt="About Image" />
-          <div className="centered">About Me Beyond CS</div>
+          <div className="centered about-text">About Me Beyond CS</div>
         </div>
       </a>
     </div>

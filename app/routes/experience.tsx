@@ -4,11 +4,11 @@ import { experience } from "../data/experience.js";
 import type { Experience } from "../data/experience.js";
 import "../experience.css";
 import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function Experience() {
   return (
-    <div>
-      <div className="social-icons">
+    <div>      <div className="social-icons">
         <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-linkedin-in"></i>
         </a>
@@ -18,14 +18,11 @@ export default function Experience() {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className="fas fa-envelope"></i>
         </a>
-      </div>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-file-alt"></i>
+        </a>      </div>
         
-      <nav>
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/experience" className="current">Experience</a>
-        <a href="/about">Beyond CS</a>
-      </nav>
+      <Navigation currentPage="experience" />
 
       <div className="header">
         <div className="header-content">
@@ -34,7 +31,7 @@ export default function Experience() {
             <span style={{ color: "#40E0D0" }}>Experience</span>
           </h1>
           <p>
-            My professional experience and internships in technology, cybersecurity, and software development.
+            Click on a role to learn more about my internships and leadership experience across software engineering, cybersecurity, DEI advocacy, and entrepreneurship.
           </p>
         </div>
       </div>      <div className="projects-container">        {experience.map((exp: Experience) => (

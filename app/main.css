@@ -17,6 +17,7 @@ h1 {
   line-height: 1.2;
   font-size: clamp(18px, 4vw, 35px);
   padding-bottom: 10px;
+  margin-bottom: 0;
 }
 
 p {
@@ -24,6 +25,7 @@ p {
   color: #ffffff;
   font-size: clamp(17px, 1.5vw, 20px);
   line-height: 1.6;
+  margin-top: 0;
 }
 
 .header-content {
@@ -113,4 +115,209 @@ nav a:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #40E0D0;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(64, 224, 208, 0.3);
+}
+
+.hamburger-menu:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #b340e0;
+  box-shadow: 0 6px 16px rgba(179, 64, 224, 0.4);
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 3px;
+  background: linear-gradient(45deg, #40E0D0, #b340e0);
+  margin: 2px 0;
+  transition: 0.3s;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when active */
+.hamburger-menu .hamburger-line.active:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu .hamburger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu .hamburger-line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay for mobile menu */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .header-content-body {
+    width: 100%;
+  }
+  
+  .circle-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Hide regular navigation on mobile */
+  nav:not(.nav-menu) {
+    display: none;
+  }
+  
+  /* Social icons adjustments */
+  .social-icons {
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .social-icons a {
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  
+  /* Typography adjustments */
+  h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: center;
+  }
+  
+  p {
+    font-size: clamp(16px, 4vw, 18px);
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Hamburger menu styles */
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d1b2e 100%);
+    border-left: 3px solid #40E0D0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: -8px 0 25px rgba(64, 224, 208, 0.2);
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-menu a {
+    padding: 20px 0;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid rgba(64, 224, 208, 0.2);
+    font-size: 18px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .nav-menu a:hover {
+    background: rgba(64, 224, 208, 0.1);
+    color: #40E0D0;
+    transform: translateX(-5px);
+  }
+  
+  .nav-menu a.current {
+    background: rgba(179, 64, 224, 0.2);
+    color: #b340e0;
+    border-color: #b340e0;
+  }
+  
+  .nav-menu a:last-child {
+    border-bottom: 1px solid rgba(64, 224, 208, 0.2);
+  }
+  
+  .nav-overlay.active {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens */
+  .header-content {
+    padding: 0 0.5rem;
+  }
+  
+  .circle-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .social-icons a {
+    margin: 0 12px;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: clamp(20px, 7vw, 28px);
+  }
+  
+  p {
+    font-size: clamp(14px, 4.5vw, 16px);
+  }
 }

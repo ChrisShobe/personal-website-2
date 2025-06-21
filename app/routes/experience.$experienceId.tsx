@@ -4,12 +4,12 @@ import { experience } from "../data/experience.js";
 import type { Experience } from "../data/experience.js";
 import "../experience.css";
 import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function ExperienceDetail() {
     const { experienceId } = useParams();
     const experienceItem = experience.find(e => e.id === experienceId);
-    
-    if (!experienceItem) {
+      if (!experienceItem) {
         return (
         <div>
             <div className="social-icons">
@@ -22,14 +22,11 @@ export default function ExperienceDetail() {
             <a href="mailto:chrisshobe2000@gmail.com">
                 <i className="fas fa-envelope"></i>
             </a>
-        </div>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-file-alt"></i>
+            </a>        </div>
         
-        <nav>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/experience" className="current">Experience</a>
-            <a href="/about">Beyond CS</a>
-        </nav>
+        <Navigation currentPage="experience" />
 
         <div className="header">
             <div className="header-content">
@@ -40,8 +37,7 @@ export default function ExperienceDetail() {
         </div>
         </div>
         );
-    }    
-    return (
+    }      return (
       <div>
         <div className="social-icons">
           <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
@@ -53,16 +49,13 @@ export default function ExperienceDetail() {
           <a href="mailto:chrisshobe2000@gmail.com">
             <i className="fas fa-envelope"></i>
           </a>
-        </div>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i className="fas fa-file-alt"></i>
+          </a>        </div>
       
-        <nav>
-          <a href="/">Home</a>
-          <a href="/projects">Projects</a>
-          <a href="/experience" className="current">Experience</a>
-          <a href="/about">Beyond CS</a>
-        </nav>        
+        <Navigation currentPage="experience" />        
         
-        <Link to="/experience" className="back-button">← Back to All Experience</Link>        <div className="experience-detail">          <div className="experience-detail-content">
+        <Link to="/experience" className="back-button">← Back to All Experience</Link><div className="experience-detail">          <div className="experience-detail-content">
             <div className="experience-detail-header">
               <img src={experienceItem.image} alt={`${experienceItem.title} logo`} className="experience-detail-title-image" />
               <h1>{experienceItem.title}</h1>

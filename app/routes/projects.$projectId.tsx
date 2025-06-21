@@ -2,11 +2,11 @@ import React from "react";
 import { useParams, Link } from "react-router";
 import { projects } from "../data/projects";
 import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
   const project = projects.find(p => p.id === projectId);
-
   if (!project) {
     return (
       <div>
@@ -20,14 +20,11 @@ export default function ProjectDetail() {
           <a href="mailto:chrisshobe2000@gmail.com">
             <i className="fas fa-envelope"></i>
           </a>
-        </div>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i className="fas fa-file-alt"></i>
+          </a>        </div>
           
-        <nav>
-          <a href="/">Home</a>
-          <a href="/projects" className="current">Projects</a>
-          <a href="/experience">Experience</a>
-          <a href="/about">Beyond CS</a>
-        </nav>
+        <Navigation currentPage="projects" />
 
         <div className="header">
           <div className="header-content">
@@ -39,7 +36,6 @@ export default function ProjectDetail() {
       </div>
     );
   }
-
   return (
     <div>
       <div className="social-icons">
@@ -52,16 +48,13 @@ export default function ProjectDetail() {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className="fas fa-envelope"></i>
         </a>
-      </div>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i className="fas fa-file-alt"></i>
+        </a>      </div>
         
-      <nav>
-        <a href="/">Home</a>
-        <a href="/projects" className="current">Projects</a>
-        <a href="/experience">Experience</a>
-        <a href="/about">Beyond CS</a>
-      </nav>
+      <Navigation currentPage="projects" />
 
-      <Link to="/projects" className="back-button">← Back to All Projects</Link>      <div className="project-detail">        {(project.award || project.projectType) && (
+      <Link to="/projects" className="back-button">← Back to All Projects</Link><div className="project-detail">        {(project.award || project.projectType) && (
           <div className="project-detail-badges">
             <div>
               {project.award && (

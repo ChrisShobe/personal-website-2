@@ -5,6 +5,7 @@ import type { AboutCategory } from "../data/about.js";
 import "../home.css";
 import "../about.css";
 import "../project.css";
+import Navigation from "../components/Navigation.js";
 
 export default function AboutDetail() {
     const { categoryId } = useParams();
@@ -24,15 +25,9 @@ export default function AboutDetail() {
             </a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-file-alt"></i>
-            </a>
-        </div>
+            </a>        </div>
         
-        <nav>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/experience">Experience</a>
-            <a href="/about" className="current">Beyond CS</a>
-        </nav>
+        <Navigation currentPage="about" />
 
         <div className="header">
             <div className="header-content">
@@ -57,15 +52,9 @@ export default function AboutDetail() {
           </a>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <i className="fas fa-file-alt"></i>
-          </a>
-        </div>
+          </a>        </div>
       
-        <nav>
-          <a href="/">Home</a>
-          <a href="/projects">Projects</a>
-          <a href="/experience">Experience</a>
-          <a href="/about" className="current">Beyond CS</a>
-        </nav>
+        <Navigation currentPage="about" />
 
         <Link to="/about" className="back-button">← Back to Beyond CS</Link>
         

@@ -57,10 +57,19 @@
   
   .about-section h3 {
     font-size: 1.5rem;
-  }  .about-images {
+  }
+  
+  .about-images {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     min-height: 250px;
+  }
+  
+  /* Align about page text with image and title on mobile */
+  .project p {
+    text-align: left;
+    margin-left: 61px; /* 50px image width + 11px gap = 61px */
+    padding-left: 0;
   }
 }
 
@@ -114,6 +123,13 @@
   
   .project-header h3 {
     font-size: 1.1rem;
+  }
+  
+  /* Align about page text with smaller image on mobile */
+  .project p {
+    text-align: left;
+    margin-left: 48px; /* 40px image width + 8px gap = 48px */
+    padding-left: 0;
   }
   
   .project-detail {

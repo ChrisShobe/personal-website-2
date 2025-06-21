@@ -2,9 +2,13 @@
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .project-detail {
@@ -32,6 +36,9 @@
   margin-bottom: 1rem;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-links a {
@@ -104,8 +111,12 @@
   margin-bottom: 1.5rem;
   border: 1px solid rgba(64, 224, 208, 0.2);
   transition: border-color 0.3s ease, background-color 0.3s ease;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   position: relative; /* Added for badge positioning */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .project:hover {
@@ -121,6 +132,16 @@
 
 .project p {
   margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Mobile text alignment fix */
+@media (max-width: 768px) {
+  .project p {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 /* Project Badge Styles */
@@ -133,6 +154,8 @@
   justify-content: space-between;
   align-items: flex-start;
   z-index: 10;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .badge {
@@ -211,12 +234,31 @@
 
 /* Responsive styles for badges */
 @media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .project {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
   .project-badges {
     position: static;
     margin-bottom: 1rem;
     justify-content: flex-start;
     gap: 0.5rem;
-  }  
+    flex-wrap: wrap;
+  }
+  
   .project-header {
     margin-top: 0.5rem;
   }
@@ -225,11 +267,29 @@
     margin-top: 0;
   }
   
+  .project p {
+    text-align: left;
+    margin-left: 61px; /* 50px image width + 11px gap = 61px */
+    padding-left: 0;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-left: 61px; /* Align with text */
+  }
+  
+  .project-links {
+    width: 100%;
+  }
+  
   .project-detail-badges {
     position: static;
     margin-bottom: 1rem;
     justify-content: flex-start;
     gap: 0.5rem;
+    flex-wrap: wrap;
   }
   
   .project-detail-content {
@@ -246,12 +306,25 @@
 @media (max-width: 480px) {
   .projects-container {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 0.5rem;
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .project {
     padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .project-badges {
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
   
   .project-header {
@@ -267,6 +340,30 @@
   
   .project-header h3 {
     font-size: 1.1rem;
+  }
+  
+  .project p {
+    text-align: left;
+    margin-left: 48px; /* 40px image width + 8px gap = 48px */
+    padding-left: 0;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-left: 48px; /* Align with text */
+  }
+  
+  .project-links {
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
   }
   
   .project-detail {
@@ -305,5 +402,14 @@
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+}
+
+/* Medium screen responsive styles */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 }

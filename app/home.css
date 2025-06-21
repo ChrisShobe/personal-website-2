@@ -12,7 +12,7 @@
 }
 
 .link-box {
-  animation: fadeIn 1.2s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;

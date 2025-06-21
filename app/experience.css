@@ -212,9 +212,58 @@
         padding: 0 1rem;
     }
     
+    .project {
+        overflow: visible !important;
+    }
+    
     .project-badges {
+        position: static;
+        margin-bottom: 0.5rem;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .project-header {
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-meta {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.75rem;
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+      .project-tags {
+        width: calc(100% - 2rem);
+        max-width: calc(100vw - 4rem);
+        box-sizing: border-box;
+        overflow: visible;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        padding-right: 1rem;
+    }
+    
+    .project-tags .tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        white-space: nowrap;
+        max-width: calc(50% - 0.125rem);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .badge.experience,
+    .badge.date {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        white-space: nowrap;
     }
 }
 
@@ -222,11 +271,16 @@
 @media (max-width: 480px) {
   .project {
     padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible !important;
   }
   
   .project-header {
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
   }
   
   .project-list-image {
@@ -240,15 +294,48 @@
   
   .project-badges {
     position: static;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    flex-wrap: wrap;
   }
   
-  .badge {
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+    .project-tags {
+    width: calc(100% - 1rem);
+    max-width: calc(100vw - 3rem);
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-right: 0.5rem;
+  }
+  
+  .project-tags .tag {
     font-size: 0.65rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 1;
+    max-width: calc(45% - 0.125rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .badge.experience,
+  .badge.date {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
   }
   
   .experience-detail {

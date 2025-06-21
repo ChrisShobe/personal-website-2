@@ -25,7 +25,7 @@ export const experience: Experience[] = [  {
     startDate: "June 2024",
     endDate: "Present",
     tags: ["Security", "Vulnerability Assessment", "Incident Management"],
-    fullDescription: "My current role as a Cyber Security Intern at Palomar Specialty Insurance involves supporting the security team in various tasks, including vulnerability assessments, incident response, and security awareness training. I am gaining hands-on experience with security tools and methodologies while contributing to the overall security posture of the organization.",
+    fullDescription: "As a Cyber Security Intern at Palomar Specialty Insurance, I support the security team in tasks like vulnerability assessments, incident response, and security awareness training. I'm gaining hands-on experience with tools and methodologies while helping strengthen the organization’s overall security posture.",
   },{
     id: "wicys",
     title: "Event Coordinator",
@@ -40,12 +40,12 @@ export const experience: Experience[] = [  {
       {
         title: "Event Coordinator",
         date: "May 2025 – Present",
-        description: "As Event Coordinator for SCU WiCyS (Women in Cybersecurity), I organize and lead weekly meetings and events, facilitating communication and collaboration within the board. I plan social and technical events by managing logistics such as venue booking, supplies, and coordination with the PR team for effective promotion. I also lead event presentations or delegate responsibilities to ensure smooth execution and frequently collaborate with other student groups to host interdisciplinary events that broaden our reach and impact."
+        description: "I organize and lead weekly SCU WiCyS meetings and events, managing logistics like venues, supplies, and PR coordination. I guide presentations or delegate tasks to ensure smooth execution, and collaborate with other student groups to host interdisciplinary events that expand our reach."
       },
       {
         title: "Public Relations",
         date: "Oct 2024 – May 2025",
-        description: "In my PR role, I managed SCU WiCyS’s communication strategy by creating and distributing weekly newsletters, flyers, and running social media campaigns on Instagram and LinkedIn. My efforts led to increased visibility and engagement across events, and I implemented creative promotional strategies that significantly boosted attendance and awareness of the chapter’s cybersecurity initiatives."
+        description: "I managed SCU WiCyS’s communication strategy, creating newsletters, flyers, and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement, and my creative promotion significantly grew awareness of our cybersecurity initiatives."
       }
     ]
   }, {
@@ -56,7 +56,7 @@ export const experience: Experience[] = [  {
     startDate: "Oct 2024",
     endDate: "Present",
     tags: ["DEI in STEM", "Intersectional Advocacy", "Student Organization Leadership"],
-    fullDescription: "As the leader of IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM), I have been guiding its transition from a coalition into a fully recognized Registered Student Organization (RSO) that champions intersectionality and unites DEI-focused engineering groups such as NSBE, SHPE, and SWE. Our mission is to support underrepresented students in STEM—including BIPOC, queer, disabled, and first-generation individuals—by fostering an inclusive community through mentorship, advocacy, and programming. We create events that center identity, accessibility, and justice, while also ensuring space for marginalized groups often left out of traditional structures, such as disabled and queer engineers without a dedicated organization. I manage strategic planning, internal leadership, and collaboration with student government and campus partners to drive institutional change and long-term impact.",
+    fullDescription: "As the leader of IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM), I’m guiding its transition into a fully recognized RSO that unites DEI-focused engineering groups like NSBE, SHPE, and SWE. We support underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I manage strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
   },   {
     id: "sab",
     title: "Outreach Coordinator",
@@ -70,17 +70,17 @@ export const experience: Experience[] = [  {
       {
         title: "Outreach Coordinator",
         date: "May 2025 – Present",
-        description: "As Outreach Coordinator, I lead efforts to build partnerships with on-campus organizations, including clubs, fraternities, and sororities, to host collaborative events that promote entrepreneurship. I also plan and organize classroom visits to increase awareness of the Student Advisory Board (SAB) and expand engagement with the Ciocca Center's entrepreneurial programs."
+        description: "I build partnerships with student orgs to co-host entrepreneurship events and organize classroom visits to raise awareness of SAB and Ciocca Center programs, helping expand campus engagement."
       },
       {
         title: "Event Coordinator",
         date: "May 2024 – May 2025",
-        description: "In this role, I collaborated with fellow Event Coordinators and Co-Chairs to design and execute interdisciplinary events that encourage entrepreneurial thinking. I documented all logistics—such as timing, location, themes, and partnerships with student clubs or external companies—to streamline event coordination and ensure smooth execution and high-impact programming."
+        description: "I collaborated with peers to design interdisciplinary events promoting entrepreneurship. I managed logistics (timing, themes, locations, and partnerships) to streamline planning and ensure impactful programming."
       },
       {
         title: "Underclassmen Representative",
         date: "Nov 2023 – May 2024",
-        description: "As an underclassmen rep and marketing team member, I contributed to event branding by designing flyers and merchandise for entrepreneurship-related programs. I also served as the team scribe, taking detailed meeting notes to enhance team communication, and actively supported the planning and execution of events that brought the Ciocca Center's initiatives to life."
+        description: "As a first-year rep, I supported event branding by designing flyers and merchandise, documented meetings to improve team coordination, and helped plan events that advanced Ciocca Center initiatives."
       }
     ],
     bottomImage: "/assets/images/experience/sab board.jpg"
@@ -97,17 +97,17 @@ export const experience: Experience[] = [  {
       {
         title: "Treasurer",
         date: "Apr 2025 – Present",
-        description: "As Treasurer of SCU ACM, I manage the organization's budget and ensure the responsible allocation of funds across events and initiatives. I collaborate with the Center for Student Involvement, the School of Engineering, and the Math and Computer Science Department to secure event funding. I oversee expenses for large-scale events like hackathons, ensuring cost-efficiency and compliance with university policies. Additionally, I handle reimbursements, prepare financial reports, and draft annual budgets to maintain transparency and fiscal accountability."
+        description: "I manage SCU ACM’s budget, oversee spending for events like hackathons, and ensure compliance with university policies. I work with school departments to secure funding, handle reimbursements, and prepare budgets to maintain fiscal transparency."
       },  
       {
         title: "DEI Chair",
         date: "Apr 2024 – Apr 2025",
-        description: "In my role as DEI Chair, I represent ACM in IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM) meetings, advocating for inclusivity and equitable practices. I lead DEI-centered events in collaboration with student groups such as NSBE, SHPE, and SWE to foster a more inclusive STEM environment. I also analyze diversity data to evaluate ACM's progress and drive initiatives that uplift underrepresented voices within the department and broader student body."
+        description: "I represent ACM in IDEAS meetings and lead DEI events with groups like NSBE, SHPE, and SWE. I assess diversity metrics and drive inclusive initiatives to elevate underrepresented voices within STEM at SCU."
       },
       {
         title: "Underclassmen Representative",
         date: "Oct 2023 – Apr 2024",
-        description: "As the sole first-year member of the ACM board, I gained early exposure to organizational leadership by shadowing upperclassmen and participating in board decisions. I contributed to marketing efforts by designing promotional flyers and managing ACM’s Instagram to boost visibility and engagement. I also assisted in organizing events like workshops and hackathons, helping to build community and enhance member learning experiences."
+        description: "As ACM’s sole first-year board member, I contributed to marketing via flyer design and Instagram management. I also helped plan workshops and hackathons, gaining early leadership experience and fostering community."
       },
     ],
     bottomImage: "/assets/images/experience/acm-board.jpg"
@@ -119,7 +119,7 @@ export const experience: Experience[] = [  {
     startDate: "June 2024",
     endDate: "Aug 2024",
     tags: ["Agile Development", "Full-Stack Web Development", "Testing Automation"],
-    fullDescription: "During this internship, I applied Scrum and Agile methodologies to manage project workflows and tasks efficiently. I updated the corporate website using WordPress and enhanced the insured portal with modern web technologies such as HTML, TypeScript, Sass, Bootstrap, Next.js, Node.js, and React. I developed automation scripts with Java, Spring Boot, and Selenium, using XPaths for testing, and gained exposure to Pega for automated workflows. Working closely with Scrum Masters, Business Analysts, QAs, and developers gave me insight into cross-functional team dynamics. I also optimized internal tools for the Claims department using Jira and led a \"Tips and Tricks\" session on Microsoft Teams and Outlook for over 40 employees. Additionally, I co-presented a Social Media Mascot Campaign that received positive feedback and sparked my interest in marketing.",
+    fullDescription: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees.",
     bottomImage: "/assets/images/experience/palomar-2024.jpg"
 }
 ];

@@ -55,10 +55,13 @@ export default function ExperienceDetail() {
       
         <Navigation currentPage="experience" />        
         
-        <Link to="/experience" className="back-button">← Back to All Experience</Link><div className="experience-detail">          <div className="experience-detail-content">
+        <Link to="/experience" className="back-button">← Back to All Experience</Link>        <div className="experience-detail">          <div className="experience-detail-content">
             <div className="experience-detail-header">
-              <img src={experienceItem.image} alt={`${experienceItem.title} logo`} className="experience-detail-title-image" />
-              <h1>{experienceItem.title}</h1>
+              <img src={experienceItem.image} alt={`${experienceItem.company} logo`} className="experience-detail-title-image" />
+              <div>
+                <h1>{experienceItem.company}</h1>
+                <h2 className="experience-position">{experienceItem.title}</h2>
+              </div>
             </div>
           <div className="experience-dates">
             {experienceItem.startDate && (

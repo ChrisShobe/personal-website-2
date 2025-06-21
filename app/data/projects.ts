@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [  {
     id: "text-to-test",
     title: "Text-2-Test",
-    description: "Turn any PDF into a quiz—automated question generation made easy.",
+    description: "Turn any PDF into a quiz-automated question generation made easy.",
     image: "/assets/images/project/text-to-test.png",
     devpost: "https://devpost.com/software/study-78q0r3",    github: "https://github.com/ChrisShobe/intel-hack",
     tags: ["Python", "React", "Educational Tech"],

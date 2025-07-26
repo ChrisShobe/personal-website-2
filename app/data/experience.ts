@@ -19,7 +19,7 @@ export interface Experience {
 
 export const experience: Experience[] = [  {
     id: "security-palomar",
-    title: "CyberSecurity Intern",
+    title: "Cyber Security Intern",
     company: "Palomar Specialty Insurance",
     image: "/assets/images/experience/palomar-logo.png",
     startDate: "June 2024",

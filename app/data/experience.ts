@@ -26,6 +26,7 @@ export const experience: Experience[] = [  {
     endDate: "Present",
     tags: ["Security", "Vulnerability Assessment", "Incident Management"],
     fullDescription: "During this internship, I applied Agile practices to support cybersecurity initiatives across the organization. I developed and deployed PowerShell scripts via Microsoft Intune to verify endpoint security, and created automated compliance reports using Azure and PowerShell. I also designed Okta workflows to streamline user group assignments and reduce exception-related tickets. I participated in annual policy reviews, documented internal security procedures and hardware inventories, and authored security bulletins to keep staff informed of emerging threats. I contributed to external cybersecurity audits by organizing compliance documentation and led a health check of endpoint security tools, identifying non-human identities for remediation. Additionally, I mapped wireframes to illustrate the integration of security tools with core business systems.",
+    bottomImage: "/assets/images/experience/Palomar2025.jpg"
   },{
     id: "wicys",
     title: "Event Coordinator",

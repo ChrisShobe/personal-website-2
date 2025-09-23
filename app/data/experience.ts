@@ -25,7 +25,7 @@ export const experience: Experience[] = [  {
     startDate: "June 2024",
     endDate: "Present",
     tags: ["Security", "Vulnerability Assessment", "Incident Management"],
-    fullDescription: "",
+    fullDescription: "Progressed from Software Engineer Intern to Cybersecurity Associate at Palomar Specialty Insurance, contributing to web development, automation, and security initiatives, and promoted in recognition of strong technical impact.",
     bottomImage: "/assets/images/experience/Palomar2025.jpg",
     roles: [
       {

@@ -1,8 +1,8 @@
 import "../home.css";
-import meImg from "/assets/images/home/me.jpg";
+import meImg from "/assets/images/home/me.png";
 import projectImg from "/assets/images/home/projects.jpg";
 import experienceImg from "/assets/images/home/experience.jpg";
-import aboutImg from "/assets/images/home/about.jpg";
+import aboutImg from "/assets/images/home/sky.jpg";
 import Navigation from "../components/Navigation.js";
 
 const Home = () => {

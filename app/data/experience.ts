@@ -19,14 +19,31 @@ export interface Experience {
 
 export const experience: Experience[] = [  {
     id: "security-palomar",
-    title: "Cyber Security Intern",
+    title: "Cyber Security Associate",
     company: "Palomar Specialty Insurance",
     image: "/assets/images/experience/palomar-logo.png",
     startDate: "June 2024",
     endDate: "Present",
     tags: ["Security", "Vulnerability Assessment", "Incident Management"],
-    fullDescription: "During this internship, I applied Agile practices to support cybersecurity initiatives across the organization. I developed and deployed PowerShell scripts via Microsoft Intune to verify endpoint security, and created automated compliance reports using Azure and PowerShell. I also designed Okta workflows to streamline user group assignments and reduce exception-related tickets. I participated in annual policy reviews, documented internal security procedures and hardware inventories, and authored security bulletins to keep staff informed of emerging threats. I contributed to external cybersecurity audits by organizing compliance documentation and led a health check of endpoint security tools, identifying non-human identities for remediation. Additionally, I mapped wireframes to illustrate the integration of security tools with core business systems.",
-    bottomImage: "/assets/images/experience/Palomar2025.jpg"
+    fullDescription: "",
+    bottomImage: "/assets/images/experience/Palomar2025.jpg",
+    roles: [
+      {
+        title: "Cyber Security Associate",
+        date: "Sept 2025 - Present",
+        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong performance and technical contributions."
+      },
+      {
+        title: "Cyber Security Intern",
+        date: "June 2025 - Sept 2025",
+        description: "Applied Agile practices to support cybersecurity initiatives, developing and deploying PowerShell scripts via Intune for endpoint security and automated compliance reporting in Azure. Designed Okta workflows to streamline user group assignments, participated in policy reviews, documented procedures and hardware inventories, and authored security bulletins on emerging threats. Supported external audits by organizing compliance documentation, led a security health check identifying non-human identities, and created wireframes illustrating tool integration with business systems."
+      },
+      {
+        title: "Software Engineer Intern",
+        date: "June 2024 - Aug 2024",
+        description: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees."
+      }
+    ]
   },{
     id: "wicys",
     title: "Event Coordinator",
@@ -112,15 +129,5 @@ export const experience: Experience[] = [  {
       },
     ],
     bottomImage: "/assets/images/experience/acm-board.jpg"
-  },   {
-    id: "swe-palomar",
-    title: "SWE Intern",
-    company: "Palomar Specialty Insurance",    
-    image: "/assets/images/experience/palomar-logo.png",
-    startDate: "June 2024",
-    endDate: "Aug 2024",
-    tags: ["Agile Development", "Full-Stack Web Development", "Testing Automation"],
-    fullDescription: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees.",
-    bottomImage: "/assets/images/experience/palomar-2024.jpg"
-}
+  }
 ];

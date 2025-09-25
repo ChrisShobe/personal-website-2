@@ -18,7 +18,17 @@ export interface Experience {
 }
 
 export const experience: Experience[] = [  {
-    id: "security-palomar",
+    id: "capitalone",
+    title: "Cyber Security Intern",
+    company: "Capital One",
+    image: "/assets/images/experience/capital-one-logo.png",
+    startDate: "June 2027",
+    endDate: "Aug 2027",
+    tags: ["Cloud Security", "Threat Detection", "Security Automation"],
+    fullDescription: "After a competitive interview process, I was selected to join Capital One as a Cybersecurity Intern for Summer 2026",
+    bottomImage: "/assets/images/experience/lifeatC1.png"
+  },{
+    id: "palomar",
     title: "Cyber Security Associate",
     company: "Palomar Specialty Insurance",
     image: "/assets/images/experience/palomar-logo.png",

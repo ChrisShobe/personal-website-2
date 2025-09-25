@@ -20,7 +20,7 @@ export default function ProjectDetail() {
           <a href="mailto:chrisshobe2000@gmail.com">
             <i className="fas fa-envelope"></i>
           </a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
             <i className="fas fa-file-alt"></i>
           </a>        </div>
           
@@ -48,7 +48,7 @@ export default function ProjectDetail() {
         <a href="mailto:chrisshobe2000@gmail.com">
           <i className="fas fa-envelope"></i>
         </a>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
           <i className="fas fa-file-alt"></i>
         </a>      </div>
         

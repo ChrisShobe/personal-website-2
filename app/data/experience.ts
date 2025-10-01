@@ -76,15 +76,6 @@ export const experience: Experience[] = [  {
         description: "I managed SCU WiCyS’s communication strategy, creating newsletters, flyers, and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement, and my creative promotion significantly grew awareness of our cybersecurity initiatives."
       }
     ]
-  }, {
-    id: "ideas",
-    title: "Co-Chair",
-    company: "IDEAS at SCU",
-    image: "/assets/images/experience/scu-logo.png",
-    startDate: "Oct 2024",
-    endDate: "Present",
-    tags: ["DEI in STEM", "Intersectional Advocacy", "Student Organization Leadership"],
-    fullDescription: "As the leader of IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM), I’m guiding its transition into a fully recognized RSO that unites DEI-focused engineering groups like NSBE, SHPE, and SWE. We support underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I manage strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
   },   {
     id: "sab",
     title: "Outreach Coordinator",
@@ -139,5 +130,15 @@ export const experience: Experience[] = [  {
       },
     ],
     bottomImage: "/assets/images/experience/acm-board.jpg"
+  },
+  {
+    id: "ideas",
+    title: "Co-Chair",
+    company: "IDEAS at SCU",
+    image: "/assets/images/experience/scu-logo.png",
+    startDate: "Oct 2024",
+    endDate: "Oct 2025",
+    tags: ["DEI in STEM", "Intersectional Advocacy", "Student Organization Leadership"],
+    fullDescription: "As the leader of IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM), I’m guiding its transition into a fully recognized RSO that unites DEI-focused engineering groups like NSBE, SHPE, and SWE. We support underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I manage strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
   }
 ];

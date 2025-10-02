@@ -76,34 +76,7 @@ export const experience: Experience[] = [  {
         description: "I managed SCU WiCyS’s communication strategy, creating newsletters, flyers, and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement, and my creative promotion significantly grew awareness of our cybersecurity initiatives."
       }
     ]
-  },   {
-    id: "sab",
-    title: "Outreach Coordinator",
-    company: "SCU Ciocca Center",
-    image: "/assets/images/experience/sab-logo.png",
-    startDate: "Nov 2023",
-    endDate: "Present",
-    tags: ["Entrepreneurship Programming", "Event & Outreach Coordination", "Student Marketing & Communications"],
-    fullDescription: "Active board member of the student advisory board for SCU Ciocca Center, progressing through multiple leadership roles from Underclassmen Representative to current Outreach position.",
-    roles: [
-      {
-        title: "Outreach Coordinator",
-        date: "May 2025 – Present",
-        description: "I build partnerships with student orgs to co-host entrepreneurship events and organize classroom visits to raise awareness of SAB and Ciocca Center programs, helping expand campus engagement."
-      },
-      {
-        title: "Event Coordinator",
-        date: "May 2024 – May 2025",
-        description: "I collaborated with peers to design interdisciplinary events promoting entrepreneurship. I managed logistics (timing, themes, locations, and partnerships) to streamline planning and ensure impactful programming."
-      },
-      {
-        title: "Underclassmen Representative",
-        date: "Nov 2023 – May 2024",
-        description: "As a first-year rep, I supported event branding by designing flyers and merchandise, documented meetings to improve team coordination, and helped plan events that advanced Ciocca Center initiatives."
-      }
-    ],
-    bottomImage: "/assets/images/experience/sab board.jpg"
-  },    {
+  },  {
     id: "acm",
     title: "Treasurer",
     company: "Association for Computing Machinery",
@@ -132,6 +105,34 @@ export const experience: Experience[] = [  {
     bottomImage: "/assets/images/experience/acm-board.jpg"
   },
   {
+    id: "sab",
+    title: "Outreach Coordinator",
+    company: "SCU Ciocca Center",
+    image: "/assets/images/experience/sab-logo.png",
+    startDate: "Nov 2023",
+    endDate: "Oct 2025",
+    tags: ["Entrepreneurship Programming", "Event & Outreach Coordination", "Student Marketing & Communications"],
+    fullDescription: "Former board member of the student advisory board for SCU Ciocca Center, progressed through multiple leadership roles from Underclassmen Representative to Outreach Coordinator.",
+    roles: [
+      {
+        title: "Outreach Coordinator",
+        date: "May 2025 – Oct 2025",
+        description: "I built partnerships with student orgs to co-host entrepreneurship events and organized classroom visits to raise awareness of SAB and Ciocca Center programs, helping expand campus engagement."
+      },
+      {
+        title: "Event Coordinator",
+        date: "May 2024 – May 2025",
+        description: "I collaborated with peers to design interdisciplinary events promoting entrepreneurship. I managed logistics (timing, themes, locations, and partnerships) to streamline planning and ensure impactful programming."
+      },
+      {
+        title: "Underclassmen Representative",
+        date: "Nov 2023 – May 2024",
+        description: "As a first-year rep, I supported event branding by designing flyers and merchandise, documented meetings to improve team coordination, and helped plan events that advanced Ciocca Center initiatives."
+      }
+    ],
+    bottomImage: "/assets/images/experience/sab board.jpg"
+  },
+  {
     id: "ideas",
     title: "Co-Chair",
     company: "IDEAS at SCU",
@@ -139,6 +140,6 @@ export const experience: Experience[] = [  {
     startDate: "Oct 2024",
     endDate: "Oct 2025",
     tags: ["DEI in STEM", "Intersectional Advocacy", "Student Organization Leadership"],
-    fullDescription: "As the leader of IDEAS (Inclusion, Diversity, Equity, and Advocacy in STEM), I’m guiding its transition into a fully recognized RSO that unites DEI-focused engineering groups like NSBE, SHPE, and SWE. We support underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I manage strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
+    fullDescription: "IDEAS supports underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I managed strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
   }
 ];

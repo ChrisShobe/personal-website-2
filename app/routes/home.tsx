@@ -35,7 +35,7 @@ const Home = () => {
               <span style={{ color: "#40E0D0" }}>Chris Shobe</span>
             </h1>
             <p>
-              I'm a rising junior at Santa Clara University studying Computer Science and Engineering with a Marketing minor, passionate about building inclusive, impactful tech through software, cybersecurity, and full-stack development.
+              I'm a junior at Santa Clara University studying Computer Science and Engineering with a Marketing minor, passionate about building inclusive, impactful tech through software, cybersecurity, and full-stack development.
             </p>
           </div>
         </div>

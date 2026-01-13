@@ -22,39 +22,23 @@ export const experience: Experience[] = [  {
     title: "Cyber Security Intern",
     company: "Capital One",
     image: "/assets/images/experience/capital-one-logo.png",
-    startDate: "June 2027",
-    endDate: "Aug 2027",
+    startDate: "June 2026",
+    endDate: "Aug 2026",
     tags: ["Cloud Security", "Threat Detection", "Security Automation"],
     fullDescription: "After a competitive interview process, I was selected to join Capital One as a Cybersecurity Intern for Summer 2026",
     bottomImage: "/assets/images/experience/lifeatC1.png"
-  },{
-    id: "palomar",
-    title: "Cyber Security Associate",
-    company: "Palomar Specialty Insurance",
-    image: "/assets/images/experience/palomar-logo.png",
-    startDate: "June 2024",
+  },
+  {
+    id: "wids",
+    title: "Project Coordinator",
+    company: "Women in Data Science",
+    image: "/assets/images/experience/wids-logo.jpg",
+    startDate: "Dec 2026",
     endDate: "Present",
-    tags: ["Security", "Vulnerability Assessment", "Incident Management"],
-    fullDescription: "Progressed from Software Engineer Intern to Cybersecurity Associate at Palomar Specialty Insurance, contributing to web development, automation, and security initiatives, and promoted in recognition of strong technical impact.",
-    bottomImage: "/assets/images/experience/Palomar2025.jpg",
-    roles: [
-      {
-        title: "Cyber Security Associate",
-        date: "Sept 2025 - Present",
-        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong performance and technical contributions."
-      },
-      {
-        title: "Cyber Security Intern",
-        date: "June 2025 - Sept 2025",
-        description: "Applied Agile practices to support cybersecurity initiatives, developing and deploying PowerShell scripts via Intune for endpoint security and automated compliance reporting in Azure. Designed Okta workflows to streamline user group assignments, participated in policy reviews, documented procedures and hardware inventories, and authored security bulletins on emerging threats. Supported external audits by organizing compliance documentation, led a security health check identifying non-human identities, and created wireframes illustrating tool integration with business systems."
-      },
-      {
-        title: "Software Engineer Intern",
-        date: "June 2024 - Aug 2024",
-        description: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees."
-      }
-    ]
-  },{
+    tags: ["Data Analysis", "Machine Learning", "Disaster Recovery"],
+    fullDescription: "Through the WiDS x Accenture Apprenticeship Pilot, I am collaborating with students and industry mentors on a data-driven project focused on economic resilience for wildfire-affected communities. The project analyzes socioeconomic and disaster-related data to identify vulnerabilities, assess recovery needs, and inform strategies that support long-term financial stability and workforce recovery after wildfires."
+  },
+  {
     id: "wicys",
     title: "Event Coordinator",
     company: "Women in CyberSecurity",
@@ -103,6 +87,34 @@ export const experience: Experience[] = [  {
       },
     ],
     bottomImage: "/assets/images/experience/acm-board.jpg"
+  },
+  {
+    id: "palomar",
+    title: "Cyber Security Associate",
+    company: "Palomar Specialty Insurance",
+    image: "/assets/images/experience/palomar-logo.png",
+    startDate: "June 2024",
+    endDate: "Dec 2025",
+    tags: ["Security", "Vulnerability Assessment", "Incident Management"],
+    fullDescription: "Progressed from Software Engineer Intern to Cybersecurity Associate at Palomar Specialty Insurance, contributing to web development, automation, and security initiatives, and promoted in recognition of strong technical impact.",
+    bottomImage: "/assets/images/experience/Palomar2025.jpg",
+    roles: [
+      {
+        title: "Security Associate",
+        date: "Sept 2025 - December 2025",
+        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong performance and technical contributions."
+      },
+      {
+        title: "Cyber Security Intern",
+        date: "June 2025 - Sept 2025",
+        description: "Applied Agile practices to support cybersecurity initiatives, developing and deploying PowerShell scripts via Intune for endpoint security and automated compliance reporting in Azure. Designed Okta workflows to streamline user group assignments, participated in policy reviews, documented procedures and hardware inventories, and authored security bulletins on emerging threats. Supported external audits by organizing compliance documentation, led a security health check identifying non-human identities, and created wireframes illustrating tool integration with business systems."
+      },
+      {
+        title: "Software Engineer Intern",
+        date: "June 2024 - Aug 2024",
+        description: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees."
+      }
+    ]
   },
   {
     id: "sab",

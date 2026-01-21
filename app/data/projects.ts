@@ -11,22 +11,35 @@ export interface Project {
   projectType?: string;
 }
 
-export const projects: Project[] = [  {
+export const projects: Project[] = [  
+  {
+    id: "memory-game",
+    description: "A Java desktop game where players match pairs of food-themed cards.",
+    image: "/assets/images/project/brain.png",
+    title: "Memory Game (2025)",
+    github: "https://github.com/ChrisShobe/java-project",
+    tags: ["Java Swing", "Game Development", "IntelliJ IDEA"],
+    projectType: "Class Project",
+    fullDescription: "A customizable Java Swing desktop game where players match food-themed cards with adjustable difficulty settings. Built for my Java class, this project involved implementing core game logic (card matching, timers, move tracking, and win/loss detection) alongside polished UI elements like custom rounded buttons and sliders. I gained hands-on experience with event-driven programming, state management, and balancing usability with technical constraints.",
+  },
+  {
     id: "text-to-test",
-    title: "Text-2-Test",
+    title: "Text-2-Test (2025)",
     description: "Turn any PDF into a quiz-automated question generation made easy.",
     image: "/assets/images/project/text-to-test.png",
-    devpost: "https://devpost.com/software/study-78q0r3",    github: "https://github.com/ChrisShobe/intel-hack",
+    devpost: "https://devpost.com/software/study-78q0r3",    
+    github: "https://github.com/ChrisShobe/intel-hack",
     tags: ["Python", "React", "Educational Tech"],
     projectType: "ACM x Intel Hackathon",
     fullDescription: "We created an Automated Quiz Generator that turns large PDFs into free-response questions. Built with Python and React, it uses text chunking and keyword-based parsing to extract and format questions. I developed the Python scripts for text processing and integrated question regeneration between pages, ensuring a smooth, interactive user experience."
 },
 {
     id: "hearo",
-    title: "Hearo",
+    title: "Hearo (2025)",
     description: "A background safety app that listens and alerts for deaf or hard of hearing users.",
     image: "/assets/images/project/HearoLogo.png",
-    devpost: "https://devpost.com/software/hearo-kcb80g",    github: "https://github.com/ChrisShobe/hack-for-humanity-2025",
+    devpost: "https://devpost.com/software/hearo-kcb80g",    
+    github: "https://github.com/ChrisShobe/hack-for-humanity-2025",
     tags: ["Accessibility", "Machine Learning", "Python"],
     award: "Best Womxn in Hack Award",
     projectType: "Hack for Humanity '25",
@@ -34,39 +47,43 @@ export const projects: Project[] = [  {
   },
   {
     id: "literally-cooking",
-    title: "Literally Cooking",
+    title: "Literally Cooking (2024)",
     description: "Your AI-powered kitchen assistant for smart, personalized recipes.",
     image: "/assets/images/project/cooking.png",
-    devpost: "https://devpost.com/software/recipe-app-6cx8b0",    github: "https://github.com/ChrisShobe/aws-hack-2024",
+    devpost: "https://devpost.com/software/recipe-app-6cx8b0",    
+    github: "https://github.com/ChrisShobe/aws-hack-2024",
     tags: ["Claude 3", "AWS Bedrock", "Prompt Engineering"],
     projectType: "AWS x INRIX AI Hackathon",
     fullDescription: "Literally Cooking is an AI-powered assistant that generates optimized cooking plans for two dishes. I led the Figma design, backend with Python and Boto3, and prompt flows using Claude 3. The project integrates multiple APIs and prioritizes sustainability, mental wellness, and ethical AI practices."
   },
   {
     id: "countdown-to-chaos",
-    title: "Countdown to Chaos",
+    title: "Countdown to Chaos (2024)",
     description: "Escape the room in time! Solve puzzles in this high-stakes Roblox game.",
-    image: "/assets/images/project/countdown to chaos.jpg",    devpost: "https://devpost.com/software/countdown-to-chaos",
+    image: "/assets/images/project/countdown to chaos.jpg",    
+    devpost: "https://devpost.com/software/countdown-to-chaos",
     tags: ["Lua Scripting", "Roblox Studio", "Game Design"],
     projectType: "Roblox Hack",
     fullDescription: "Countdown to Chaos is a timed escape room game built in Roblox Studio. Players solve science-themed puzzles under pressure while the screen blurs as time runs out. I scripted interactive elements using Lua and helped build fully functional rooms, learning game logic and Roblox formatting challenges."
   },
   {
     id: "treeid",
-    title: "TreeID",
+    title: "TreeID (2024)",
     description: "Explore local trees through an interactive, kid-friendly mobile app.",
     image: "/assets/images/project/treeid.png",
-    devpost: "https://devpost.com/software/treeid",    github: "https://github.com/ChrisShobe/HackforHumanity2024",
+    devpost: "https://devpost.com/software/treeid",    
+    github: "https://github.com/ChrisShobe/HackforHumanity2024",
     tags: ["Flutter", "Mobile App", "Educational Tech"],
     projectType: "Hack for Humanity '24",
     fullDescription: "TreeID is a mobile app that helps kids identify trees through an interactive dichotomous key. Built with Flutter and designed in Figma, I helped connect and build multiple pages. The app emphasizes environmental education and was designed around Yosemite National Park flora."
   },
   {
     id: "jetstream",
-    title: "JetStream",
+    title: "JetStream (2023)",
     description: "Plan your business trip seamlessly with real-time transit and flight data.",
     image: "/assets/images/project/jetstream.jpg",
-    devpost: "https://devpost.com/software/jetstream-7pas4o",    github: "https://github.com/jordanmosakowski/inrix-hack-23",
+    devpost: "https://devpost.com/software/jetstream-7pas4o",    
+    github: "https://github.com/jordanmosakowski/inrix-hack-23",
     tags: ["React", "Flask", "API Integration"],
     award: "Finalist",
     projectType: "INRIX Amazon University Hack 2023",
@@ -74,11 +91,12 @@ export const projects: Project[] = [  {
   },
   {
     id: "parking",
-    title: "Parking++",
+    title: "Parking++ (2023)",
     description: "Find the best parking fast with smart filters and Street View previews.",
     image: "/assets/images/project/parking++.png",
-    devpost: "https://devpost.com/software/parking-dkrpb5",    github: "https://github.com/sipneat/inrix-hack-2023",
-    tags: ["Vue.js", "Flask", "Google Maps API"],
+    devpost: "https://devpost.com/software/parking-dkrpb5",    
+    github: "https://github.com/sipneat/inrix-hack-2023",
+    tags: ["Vue.js", "Flask", "UI/UX Design"],
     award: "10th Place",
     projectType: "INRIX Hack 2023",
     fullDescription: "Parking++ is a Vue.js and Flask-based app that helps users find affordable, nearby parking with cost, distance, and Street View filters. I contributed UI design in Figma and coded search functionality. We tackled Google Maps integration challenges and created a consumer-focused experience."

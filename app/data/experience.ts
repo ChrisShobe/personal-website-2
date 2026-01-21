@@ -123,7 +123,7 @@ export const experience: Experience[] = [  {
     image: "/assets/images/experience/sab-logo.png",
     startDate: "Nov 2023",
     endDate: "Oct 2025",
-    tags: ["Entrepreneurship Programming", "Event & Outreach Coordination", "Student Marketing & Communications"],
+    tags: ["Entrepreneurship Programming", "Event & Outreach", "Marketing & Communications"],
     fullDescription: "Former board member of the student advisory board for SCU Ciocca Center, progressed through multiple leadership roles from Underclassmen Representative to Outreach Coordinator.",
     roles: [
       {

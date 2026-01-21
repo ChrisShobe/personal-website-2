@@ -25,14 +25,16 @@ export const aboutCategories: AboutCategory[] = [
     id: "art",
     title: "Art",
     description: "Digital art, realism, and creative expression",
-    image: "/assets/images/about/painting.jpg",
+    image: "/assets/images/about/sky.jpg",
     images: [
       "/assets/images/about/cartoonme.jpg",
-      "/assets/images/about/shoes.jpg",
-      "/assets/images/about/rainbow.jpg",
+      "/assets/images/about/christmas.png",
       "/assets/images/about/opal-digital.jpg",
       "/assets/images/about/opal-pencil.jpg",
-      "/assets/images/about/selfportrait.png"
+      "/assets/images/about/rainbow.png",
+      "/assets/images/about/shoes.jpg",
+      "/assets/images/about/flower-water.jpg",
+      "/assets/images/about/dnd.png"
     ],
     fullDescription: "I started painting with my mom at a young age, which sparked my lifelong love for art. Over time, I developed an interest in realism during high school, eventually finding my true love in digital art with its boundless spectrum of colors and the ease of fixing mistakes. I love creating art and enjoy making gifts for friends and family with the pieces I create."
   },
@@ -74,7 +76,9 @@ export const aboutCategories: AboutCategory[] = [
       "/assets/images/about/forest.jpg",
       "/assets/images/about/skiing.jpg",
       "/assets/images/about/runoff.jpg",
-      "/assets/images/about/pvsunset.jpg"
+      "/assets/images/about/pvsunset.jpg",
+      "/assets/images/about/bench.jpg",
+      "/assets/images/about/lake.jpg"
     ],
     fullDescription: "I’ve always loved capturing moments through photography, which deepened when I received my first camera at 20. My passion for hiking and skiing fuels my love for nature photography. Beyond this, I enjoy exploring philosophy and analyzing movies, often diving into their deeper meanings and themes. My marketing minor helps me understand how different fields intersect with technology. This blend of interests shapes my curiosity and creativity both personally and professionally."
   }

@@ -29,11 +29,21 @@ export const experience: Experience[] = [  {
     bottomImage: "/assets/images/experience/lifeatC1.png"
   },
   {
+    id: "ectf",
+    title: "Project Lead",
+    company: "MITRE eCTF",
+    image: "/assets/images/experience/mitre-logo.png",
+    startDate: "Jan 2026",
+    endDate: "Present",
+    tags: ["Hardware Security", "Red Teaming", "Project Leadership"],
+    fullDescription: "As Project Lead for the 2026 MITRE eCTF, I direct strategy and operations for a semester-long hardware security competition focused on protecting chip foundry data. I coordinate cross-functional teams through weekly syncs and task tracking, while also serving as a Red Teamer to identify vulnerabilities and prepare for the Attack Phase. I bridge project management and offensive security to strengthen our defenses and exploit competitor firmware."
+  },
+  {
     id: "wids",
     title: "Project Coordinator",
     company: "Women in Data Science",
     image: "/assets/images/experience/wids-logo.jpg",
-    startDate: "Dec 2026",
+    startDate: "Dec 2025",
     endDate: "Present",
     tags: ["Data Analysis", "Machine Learning", "Disaster Recovery"],
     fullDescription: "Through the WiDS x Accenture Apprenticeship Pilot, I am collaborating with students and industry mentors on a data-driven project focused on economic resilience for wildfire-affected communities. The project analyzes socioeconomic and disaster-related data to identify vulnerabilities, assess recovery needs, and inform strategies that support long-term financial stability and workforce recovery after wildfires."

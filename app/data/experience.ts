@@ -17,83 +17,75 @@ export interface Experience {
   roles?: Role[];
 }
 
-export const experience: Experience[] = [  {
+export const experience: Experience[] = [
+  {
     id: "capitalone",
     title: "Cyber Security Intern",
     company: "Capital One",
     image: "/assets/images/experience/capital-one-logo.png",
     startDate: "June 2026",
     endDate: "Aug 2026",
-    tags: ["Cloud Security", "Threat Detection", "Security Automation"],
-    fullDescription: "After a competitive interview process, I was selected to join Capital One as a Cybersecurity Intern for Summer 2026",
+    tags: ["Enterprise Cybersecurity", "Security Engineering", "Threat Analysis"],
+    fullDescription: "Selected through a competitive process for Capital One's Summer 2026 cybersecurity internship, where I will contribute to protecting enterprise-scale systems and security operations.",
     bottomImage: "/assets/images/experience/lifeatC1.png"
   },
   {
-    id: "ectf",
-    title: "Project Lead",
-    company: "MITRE eCTF",
-    image: "/assets/images/experience/mitre-logo.png",
-    startDate: "Jan 2026",
-    endDate: "Present",
-    tags: ["Hardware Security", "Red Teaming", "Project Leadership"],
-    fullDescription: "As Project Lead for the 2026 MITRE eCTF, I direct strategy and operations for a semester-long hardware security competition focused on protecting chip foundry data. I coordinate cross-functional teams through weekly syncs and task tracking, while also serving as a Red Teamer to identify vulnerabilities and prepare for the Attack Phase. I bridge project management and offensive security to strengthen our defenses and exploit competitor firmware."
-  },
-  {
-    id: "wids",
-    title: "Project Coordinator",
-    company: "Women in Data Science",
-    image: "/assets/images/experience/wids-logo.jpg",
-    startDate: "Dec 2025",
-    endDate: "Present",
-    tags: ["Data Analysis", "Machine Learning", "Disaster Recovery"],
-    fullDescription: "Through the WiDS x Accenture Apprenticeship Pilot, I am collaborating with students and industry mentors on a data-driven project focused on economic resilience for wildfire-affected communities. The project analyzes socioeconomic and disaster-related data to identify vulnerabilities, assess recovery needs, and inform strategies that support long-term financial stability and workforce recovery after wildfires."
-  },
-  {
     id: "wicys",
-    title: "Event Coordinator",
+    title: "Vice President",
     company: "Women in CyberSecurity",
     image: "/assets/images/experience/wicys-logo.png",
     startDate: "Oct 2024",
     endDate: "Present",
-    tags: ["Cybersecurity Outreach", "Event & Media Coordination", "Student Leadership"],
-    fullDescription: "Active board member of Women in CyberSecurity (WiCyS) at SCU, progressing through multiple leadership roles from Public Relations to current Event Coordinator position.",
+    tags: ["Cybersecurity Community Building", "Strategic Leadership", "Industry Engagement"],
+    fullDescription: "Grew from Public Relations to Vice President in WiCyS, leading strategy, programming, and partnerships that expand cybersecurity opportunities and career development for members.",
     bottomImage: "/assets/images/experience/wicys.jpg",
     roles: [
       {
+        title: "Vice President",
+        date: "Apr 2026 – Present",
+        description: "I lead organizational strategy, events, and cybersecurity-focused initiatives for members. I partner with industry organizations, such as CrowdStrike and WiCyS Silicon Valley, to host speaker events and career development sessions."
+      },
+      {
         title: "Event Coordinator",
-        date: "May 2025 – Present",
-        description: "I organize and lead weekly SCU WiCyS meetings and events, managing logistics like venues, supplies, and PR coordination. I guide presentations or delegate tasks to ensure smooth execution, and collaborate with other student groups to host interdisciplinary events that expand our reach."
+        date: "May 2025 – Apr 2026",
+        description: "I organized and led weekly SCU WiCyS meetings and events, managed logistics like venues, supplies, and PR coordination. I guided presentations or delegated tasks to ensure smooth execution, and collaborated with other student groups to host interdisciplinary events that expand our reach."
       },
       {
         title: "Public Relations",
         date: "Oct 2024 – May 2025",
-        description: "I managed SCU WiCyS’s communication strategy, creating newsletters, flyers, and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement, and my creative promotion significantly grew awareness of our cybersecurity initiatives."
+        description: "As one of the founding members of SCU WiCyS, I managed the chapter's communication strategy by creating newsletters and flyers and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement and significantly increased awareness of our cybersecurity initiatives."
       }
     ]
-  },  {
+  },
+  {
     id: "acm",
-    title: "Treasurer",
+    title: "President",
     company: "Association for Computing Machinery",
     image: "/assets/images/experience/acm-logo.png",
     startDate: "Oct 2023",
     endDate: "Present",
-    tags: ["Student Leadership", "Event & Budget Management", "DEI Advocacy in STEM"],
-    fullDescription: "Active board member of ACM at SCU, progressing through multiple leadership roles from Underclassmen Representative to current Treasurer position.",
+    tags: ["Organization Leadership", "Technical Program Management", "Cross-Functional Collaboration"],
+    fullDescription: "Progressed through multiple ACM leadership roles to President, directing strategy, operations, and programming for SCU's largest computing organization while scaling events, partnerships, and member engagement.",
     roles: [ 
       {
+        title: "President",
+        date: "Apr 2026 – Present",
+        description: "Lead and manage SCU's largest computing organization by setting strategic direction, delegating executive board responsibilities, and overseeing workshops, hackathons, and partnerships."
+      },  
+      {
         title: "Treasurer",
-        date: "Apr 2025 – Present",
-        description: "I manage SCU ACM’s budget, oversee spending for events like hackathons, and ensure compliance with university policies. I work with school departments to secure funding, handle reimbursements, and prepare budgets to maintain fiscal transparency."
+        date: "Apr 2025 – Apr 2026",
+        description: "Managed ACM's budget and event spending, coordinated funding with university stakeholders, and maintained transparent reimbursement and planning processes aligned with campus policy."
       },  
       {
         title: "DEI Chair",
         date: "Apr 2024 – Apr 2025",
-        description: "I represent ACM in IDEAS meetings and lead DEI events with groups like NSBE, SHPE, and SWE. I assess diversity metrics and drive inclusive initiatives to elevate underrepresented voices within STEM at SCU."
+        description: "Represented ACM in IDEAS and led DEI initiatives with organizations including NSBE, SHPE, and SWE to strengthen inclusion and support underrepresented students in computing."
       },
       {
         title: "Underclassmen Representative",
         date: "Oct 2023 – Apr 2024",
-        description: "As ACM’s sole first-year board member, I contributed to marketing via flyer design and Instagram management. I also helped plan workshops and hackathons, gaining early leadership experience and fostering community."
+        description: "As ACM's sole first-year board member, supported marketing, social media, and event planning while building early leadership experience through workshops and hackathon execution."
       },
     ],
     bottomImage: "/assets/images/experience/acm-board.jpg"
@@ -105,63 +97,25 @@ export const experience: Experience[] = [  {
     image: "/assets/images/experience/palomar-logo.png",
     startDate: "June 2024",
     endDate: "Dec 2025",
-    tags: ["Security", "Vulnerability Assessment", "Incident Management"],
-    fullDescription: "Progressed from Software Engineer Intern to Cybersecurity Associate at Palomar Specialty Insurance, contributing to web development, automation, and security initiatives, and promoted in recognition of strong technical impact.",
+    tags: ["Security Automation", "Identity & Access Management", "Vulnerability Management"],
+    fullDescription: "Progressed from Software Engineering Intern to Cybersecurity Associate at Palomar, delivering automation, IAM, and security assessment work that improved internal operations and reduced manual security overhead.",
     bottomImage: "/assets/images/experience/Palomar2025.jpg",
     roles: [
       {
         title: "Security Associate",
         date: "Sept 2025 - December 2025",
-        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong performance and technical contributions."
+        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong technical execution and measurable contributions across automation and security operations."
       },
       {
         title: "Cyber Security Intern",
         date: "June 2025 - Sept 2025",
-        description: "Applied Agile practices to support cybersecurity initiatives, developing and deploying PowerShell scripts via Intune for endpoint security and automated compliance reporting in Azure. Designed Okta workflows to streamline user group assignments, participated in policy reviews, documented procedures and hardware inventories, and authored security bulletins on emerging threats. Supported external audits by organizing compliance documentation, led a security health check identifying non-human identities, and created wireframes illustrating tool integration with business systems."
+        description: "Built and deployed PowerShell automation through Intune for endpoint compliance reporting in Azure, designed Okta IAM workflows to reduce manual access tasks, and supported audits, policy reviews, and security health assessments across enterprise systems."
       },
       {
         title: "Software Engineer Intern",
         date: "June 2024 - Aug 2024",
-        description: "During this internship, I applied Scrum and Agile to manage workflows and project tasks. I updated the corporate website using WordPress and enhanced the insured portal with modern web tools like React, TypeScript, and Sass. I also developed Java-based automation scripts using Spring Boot and Selenium, explored Pega, supported internal tools for Claims, and co-led a well-received social media campaign and tips session for over 40 employees."
+        description: "Built and improved internal tools using React, TypeScript, and modern web workflows, and developed Java automation with Spring Boot and Selenium to streamline testing and operational tasks for cross-functional teams."
       }
     ]
-  },
-  {
-    id: "sab",
-    title: "Outreach Coordinator",
-    company: "SCU Ciocca Center",
-    image: "/assets/images/experience/sab-logo.png",
-    startDate: "Nov 2023",
-    endDate: "Oct 2025",
-    tags: ["Entrepreneurship Programming", "Event & Outreach", "Marketing & Communications"],
-    fullDescription: "Former board member of the student advisory board for SCU Ciocca Center, progressed through multiple leadership roles from Underclassmen Representative to Outreach Coordinator.",
-    roles: [
-      {
-        title: "Outreach Coordinator",
-        date: "May 2025 – Oct 2025",
-        description: "I built partnerships with student orgs to co-host entrepreneurship events and organized classroom visits to raise awareness of SAB and Ciocca Center programs, helping expand campus engagement."
-      },
-      {
-        title: "Event Coordinator",
-        date: "May 2024 – May 2025",
-        description: "I collaborated with peers to design interdisciplinary events promoting entrepreneurship. I managed logistics (timing, themes, locations, and partnerships) to streamline planning and ensure impactful programming."
-      },
-      {
-        title: "Underclassmen Representative",
-        date: "Nov 2023 – May 2024",
-        description: "As a first-year rep, I supported event branding by designing flyers and merchandise, documented meetings to improve team coordination, and helped plan events that advanced Ciocca Center initiatives."
-      }
-    ],
-    bottomImage: "/assets/images/experience/sab board.jpg"
-  },
-  {
-    id: "ideas",
-    title: "Co-Chair",
-    company: "IDEAS at SCU",
-    image: "/assets/images/experience/scu-logo.png",
-    startDate: "Oct 2024",
-    endDate: "Oct 2025",
-    tags: ["DEI in STEM", "Intersectional Advocacy", "Student Organization Leadership"],
-    fullDescription: "IDEAS supports underrepresented students in STEM—including BIPOC, queer, disabled, and first-gen individuals—through mentorship, advocacy, and identity-centered programming. I managed strategic planning, internal leadership, and collaborations with student government to drive lasting institutional change.",
   }
 ];

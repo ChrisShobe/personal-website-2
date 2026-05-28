@@ -13,6 +13,15 @@ export interface Project {
 
 export const projects: Project[] = [  
   {
+    id: "write-up",
+    title: "Write Up (2026)",
+    description: "Built an AI writing coach that preserves a writer's voice while explaining why suggested edits matter.",
+    image: "/assets/images/project/WriteUp.png",
+    tags: ["React", "Python", "RAG Pipeline"],
+    projectType: "CSEN 174 Team Project",
+    fullDescription: "Write Up is an AI-powered writing coach that helps users improve their writing by explaining why changes matter instead of silently correcting mistakes. I worked on a full-stack platform that builds a longitudinal linguistic profile across drafts and delivers personalized, voice-preserving feedback through a RAG and LLM-based coaching pipeline. The application includes a React web editor with live coaching, lightweight grammar and style checks while typing, deeper AI feedback after pauses, in-text highlights showing where suggestions apply, and feedback cards with accept and decline tracking so the system can adapt over time. To support the coaching workflow, the backend combines local grammar heuristics like spell check, comma splice detection, and run-on sentence analysis with AI-generated suggestions from GPT-4o mini and LLaMA 3.3 70B through Groq, plus retrieval over a curated knowledge base and the user's draft history."
+  },
+  {
     id: "mitre-ectf",
     title: "SCU Red Team (2026)",
     description: "Led MITRE eCTF red team operations to exploit embedded HSM workflows and secure high-value flags.",
@@ -29,7 +38,7 @@ export const projects: Project[] = [
     image: "/assets/images/experience/wids-logo.jpg",
     tags: ["RAG Pipeline", "Pinecone", "React + Firebase"],
     projectType: "WiDS x Accenture Pilot",
-    fullDescription: "I built an end-to-end RAG system using Jina embeddings, Pinecone, and Groq LLM APIs, then integrated FEMA, insurance, Zillow, and user-intake data for personalized retrieval. I developed the React and Firebase application layer with persistent chat memory and real-time interaction, and improved response quality through embedding and prompt tuning for better accuracy and latency. This is currently hosted on https://wids.jakeesperson.com/."
+    fullDescription: "I built an end-to-end RAG system using Jina embeddings, Pinecone, and Groq LLM APIs, then integrated FEMA, insurance, Zillow, and user-intake data for personalized retrieval. I developed the React and Firebase application layer with persistent chat memory and real-time interaction, and improved response quality through embedding and prompt tuning for better accuracy and latency."
   },
   {
     id: "broncoctf-2026",
@@ -48,7 +57,7 @@ export const projects: Project[] = [
     title: "Memory Game (2025)",
     github: "https://github.com/ChrisShobe/java-project",
     tags: ["Java Swing", "Event-Driven Programming", "State Management"],
-    projectType: "Class Project",
+    projectType: "CSEN 160 Team Project",
     fullDescription: "For this Java class project, I built a full-screen memory game with adjustable grid size, move limits, and timer controls. I implemented core mechanics including card matching, scoring, win/loss detection, and pause or restart behavior, then designed custom Swing components to deliver a cleaner and more accessible desktop experience.",
   },
   {

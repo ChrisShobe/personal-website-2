@@ -31,7 +31,7 @@ export default function Experience() {
             <span style={{ color: "#40E0D0" }}>Experience</span>
           </h1>
           <p>
-            Click on a role to learn more about my internships and leadership experience across software engineering, cybersecurity, DEI advocacy, and entrepreneurship.
+            Click on a role to learn more about my internships and leadership experience across software engineering, cybersecurity, student organization leadership, and DEI advocacy.
           </p>
         </div>
       </div>      <div className="projects-container">        {experience.map((exp: Experience) => (

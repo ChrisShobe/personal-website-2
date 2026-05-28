@@ -29,7 +29,7 @@ export default function Projects() {
             <span style={{ color: "#40E0D0" }}>Projects</span>
           </h1>
           <p>
-            Click on a project to learn more and explore how I’ve used design, AI, and full-stack development to build real-world solutions. View the GitHub repo and Devposts if available.
+            Click on a project to learn more about how I’ve applied AI, full-stack development, cybersecurity, accessibility, and game design to build practical solutions. GitHub repos and Devposts are linked when available.
           </p>
         </div>
       </div>

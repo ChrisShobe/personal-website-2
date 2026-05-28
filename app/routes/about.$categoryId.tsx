@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, Link } from "react-router";
 import { aboutCategories } from "../data/about.js";
 import type { AboutCategory } from "../data/about.js";
@@ -6,79 +5,64 @@ import "../home.css";
 import "../about.css";
 import "../project.css";
 import Navigation from "../components/Navigation.js";
+import PageHero from "../components/PageHero.js";
+
+const CATEGORY_LABELS: Record<string, { type: string; meta: string; seq: string }> = {
+  art:       { type: "IMG_SOURCE", meta: "SOURCE: ANALOG_SKETCHPAD", seq: "RECON" },
+  music:     { type: "AUDIO_LOG",  meta: "CAPTURE_HZ: 44.1KHZ",      seq: "TRACK" },
+  traveling: { type: "GEO_LOC",    meta: "LAT_LONG: [COORD_STRINGS]", seq: "DEST"  },
+  interests: { type: "FIELD_NOTES",meta: "CLASS: PERSONAL",           seq: "LOG"   },
+};
 
 export default function AboutDetail() {
-    const { categoryId } = useParams();
-    const category = aboutCategories.find(c => c.id === categoryId);
-      if (!category) {
-        return (
-        <div>
-            <div className="social-icons">
-            <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
-            </a>
-            <a href="mailto:chrisshobe2000@gmail.com">
-                <i className="fas fa-envelope"></i>
-            </a>
-            <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-file-alt"></i>
-            </a>        </div>
-        
+  const { categoryId } = useParams();
+  const category = aboutCategories.find((c: AboutCategory) => c.id === categoryId);
+
+  if (!category) {
+    return (
+      <div className="page-shell">
         <Navigation currentPage="about" />
-
-        <div className="header">
-            <div className="header-content">
-                <h1>Category Not Found</h1>
-                <p>The category you're looking for doesn't exist.</p>
-                <Link to="/about" className="back-button">Back to Beyond CS</Link>
-            </div>
-        </div>
-        </div>
-        );
-    }      return (
-      <div>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="mailto:chrisshobe2000@gmail.com">
-            <i className="fas fa-envelope"></i>
-          </a>
-          <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-file-alt"></i>
-          </a>        </div>
-      
-        <Navigation currentPage="about" />
-
-        <Link to="/about" className="back-button">← Back to Beyond CS</Link>
-        
-        <div className="project-detail">
-          <div className="project-detail-content">
-            <div className="project-detail-header">
-              <img src={category.image} alt={`${category.title}`} className="project-detail-title-image" />
-              <h1>{category.title}</h1>
-            </div>
-            
-            <div className="project-description">
-              <h3>About {category.title}</h3>
-              <p>{category.fullDescription}</p>
-            </div>
-
-            {category.images && category.images.length > 0 && (
-              <div className="about-images">
-                {category.images.map((image, index) => (
-                  <img key={index} src={image} alt={`${category.title} ${index + 1}`} />
-                ))}
-              </div>
-            )}
-          </div>
+        <div className="detail-shell">
+          <h1>Category Not Found</h1>
+          <p>The category you're looking for doesn't exist.</p>
+          <Link to="/about" className="project-back-link">← Back to Beyond CS</Link>
         </div>
       </div>
     );
+  }
+
+  const label = CATEGORY_LABELS[category.id] ?? { type: "FILE", meta: "CLASSIFIED", seq: "REF" };
+  const allPhotos = category.images ?? [];
+
+  return (
+    <div className="page-shell page-fade-in">
+      <Navigation currentPage="about" />
+
+      <PageHero kicker="Personal archive" subtitle={category.description}>
+        <span style={{ color: "var(--teal-soft)" }}>{category.title}</span>
+      </PageHero>
+
+      <div className="detail-shell">
+        <Link to="/about" className="project-back-link">← Beyond CS</Link>
+
+        <div className="detail-card" style={{ marginBottom: "1.5rem" }}>
+          <div className="about-description-panel">
+            <h3 className="project-section-heading">About {category.title}</h3>
+            <p>{category.fullDescription}</p>
+          </div>
+        </div>
+
+        <div className="classified-grid">
+          {allPhotos.map((src, i) => (
+            <div key={i} className="classified-photo">
+              <img src={src} alt={`${category.title} ${i + 1}`} />
+              <div className="classified-label">
+                {label.type} // {label.meta} // {label.seq}_{String(i + 1).padStart(2, "0")}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

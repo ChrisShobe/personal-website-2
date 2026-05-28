@@ -5,6 +5,7 @@ export interface Project {
   image: string;
   devpost?: string;
   github?: string;
+  writeup?: string;
   fullDescription: string;
   tags?: string[];
   award?: string;
@@ -13,10 +14,20 @@ export interface Project {
 
 export const projects: Project[] = [  
   {
+    id: "personal-website",
+    title: "Personal Website (2026)",
+    description: "A responsive portfolio site showcasing projects, experience, and personal work.",
+    image: "/assets/images/home/me.png",
+    tags: ["React", "TypeScript", "Vite", "Accessibility"],
+    projectType: "Personal",
+    fullDescription: "This website is a custom portfolio built with React, TypeScript, and Vite. It emphasizes accessibility, responsive design, and an interactive 'vault' UI for exploring projects, experience, and personal interests."
+  },
+  {
     id: "write-up",
     title: "Write Up (2026)",
     description: "Built an AI writing coach that preserves a writer's voice while explaining why suggested edits matter.",
     image: "/assets/images/project/WriteUp.png",
+    writeup: "https://csen-174-s26-team-project-write-up.vercel.app/",
     tags: ["React", "Python", "RAG Pipeline"],
     projectType: "CSEN 174 Team Project",
     fullDescription: "Write Up is an AI-powered writing coach that helps users improve their writing by explaining why changes matter instead of silently correcting mistakes. I worked on a full-stack platform that builds a longitudinal linguistic profile across drafts and delivers personalized, voice-preserving feedback through a RAG and LLM-based coaching pipeline. The application includes a React web editor with live coaching, lightweight grammar and style checks while typing, deeper AI feedback after pauses, in-text highlights showing where suggestions apply, and feedback cards with accept and decline tracking so the system can adapt over time. To support the coaching workflow, the backend combines local grammar heuristics like spell check, comma splice detection, and run-on sentence analysis with AI-generated suggestions from GPT-4o mini and LLaMA 3.3 70B through Groq, plus retrieval over a curated knowledge base and the user's draft history."

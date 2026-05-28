@@ -26,8 +26,15 @@ export const experience: Experience[] = [
     startDate: "June 2026",
     endDate: "Aug 2026",
     tags: ["Enterprise Cybersecurity", "Security Engineering", "Threat Analysis"],
-    fullDescription: "Selected through a competitive process for Capital One's Summer 2026 cybersecurity internship, where I will contribute to protecting enterprise-scale systems and security operations.",
-    bottomImage: "/assets/images/experience/lifeatC1.png"
+    fullDescription: "Selected through a competitive process for Capital One's Summer 2026 cybersecurity internship, where I will focus on data visualization and operational visibility to improve detection, analysis, and response across enterprise security systems.",
+    bottomImage: "/assets/images/experience/lifeatC1.png",
+    roles: [
+      {
+        title: "Cyber Security Intern",
+        date: "June 2026 — Aug 2026",
+        description: "Working on data visualization and operational visibility to surface actionable security insights and support faster incident response across enterprise systems."
+      }
+    ]
   },
   {
     id: "wicys",

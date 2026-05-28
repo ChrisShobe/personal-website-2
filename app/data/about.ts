@@ -11,7 +11,7 @@ export const aboutCategories: AboutCategory[] = [
   {
     id: "music",
     title: "Music",
-    description: "Piano, clarinet, and composition spanning over a decade.",
+    description: "Clarinet, piano, and composition spanning over a decade.",
     image: "/assets/images/about/all-band.jpg",
     images: [
       "/assets/images/about/wind-ensemble.jpg",
@@ -19,12 +19,12 @@ export const aboutCategories: AboutCategory[] = [
       "/assets/images/about/clarinet-france.jpg",
       "/assets/images/about/old clarinet.jpg"
     ],
-    fullDescription: "Music has been a part of my life since childhood, sparked by a piano at home that inspired me to play and compose. After a few years of piano lessons, I discovered my love for the clarinet in 5th grade and focused on mastering it. Now, after nine years of playing, it remains my primary instrument. Currently, I am part of Santa Clara University's Wind Ensemble, and I hope to continue my musical journey post-graduation."
+    fullDescription: "Music has been a part of my life since childhood, beginning with piano lessons and experimenting with composition at home. When I was 10 years old, I discovered the clarinet and quickly fell in love with it. Since then, it has remained my primary instrument through middle school, high school, and college. Now at 21, I continue playing as part of Santa Clara University's Wind Ensemble and hope to keep music as a meaningful part of my life long after graduation."
   },
   {
     id: "art",
     title: "Art",
-    description: "Digital art, realism, and creative expression",
+    description: "Digital art, watercolor, realism, and creative expression",
     image: "/assets/images/about/sky.jpg",
     images: [
       "/assets/images/about/cartoonme.jpg",
@@ -36,39 +36,39 @@ export const aboutCategories: AboutCategory[] = [
       "/assets/images/about/flower-water.jpg",
       "/assets/images/about/dnd.png"
     ],
-    fullDescription: "I started painting with my mom at a young age, which sparked my lifelong love for art. Over time, I developed an interest in realism during high school, eventually finding my true love in digital art with its boundless spectrum of colors and the ease of fixing mistakes. I love creating art and enjoy making gifts for friends and family with the pieces I create."
+    fullDescription: "Art has always been one of my biggest creative outlets. I started painting with my mom at a young age, which sparked my lifelong love for creating. Over time, I became interested in realism and eventually found my true passion in digital art, where I love experimenting with color, detail, and creative freedom. More recently, I’ve also started exploring watercolor painting and enjoy the softer, more unpredictable style it brings. I especially love creating pieces as gifts for friends and family."
   },
   {
-  id: "traveling",
-  title: "Traveling",
-  description: "Exploring new places, cultures, and perspectives",
-  image: "/assets/images/about/plane.jpg",
-  images: [
-    "/assets/images/about/england.jpg",
-    "/assets/images/about/france.jpg",
-    "/assets/images/about/france2.jpg",
-    "/assets/images/about/gibraltar.jpg",
-    "/assets/images/about/grand-canyon.jpg",
-    "/assets/images/about/greece.jpg",
-    "/assets/images/about/greece2.jpg",
-    "/assets/images/about/mexico.jpg",
-    "/assets/images/about/montenegro.jpg",
-    "/assets/images/about/pisa.jpg",
-    "/assets/images/about/rome.jpg",
-    "/assets/images/about/scotland.jpg",
-    "/assets/images/about/sicily.jpg",
-    "/assets/images/about/spain.jpg",
-    "/assets/images/about/turkey.jpg",
-    "/assets/images/about/wales.jpg",
-  ],
-  fullDescription: 
-    "Growing up in California, I often traveled to Arizona and the East Coast to visit family, which sparked my love for exploring new places. Beyond the U.S., I’ve been fortunate to go on cruises to Canada and Alaska, Mexico, the Mediterranean, and the British Isles. I’ve also visited the Dominican Republic, Jamaica, and China. Each experience offered a unique glimpse into different cultures, histories, and ways of life. These travels have broadened my perspective, deepened my appreciation for global diversity, and continue to inspire my curiosity and creativity."
-},
+    id: "traveling",
+    title: "Traveling",
+    description: "Exploring new places, cultures, and perspectives",
+    image: "/assets/images/about/plane.jpg",
+    images: [
+      "/assets/images/about/greece2.jpg",
+      "/assets/images/about/montenegro.jpg",
+      "/assets/images/about/sicily.jpg",
+      "/assets/images/about/turkey.jpg",
+      "/assets/images/about/grand-canyon.jpg",
+      "/assets/images/about/france.jpg",
+      "/assets/images/about/france2.jpg",
+      "/assets/images/about/gibraltar.jpg",
+      "/assets/images/about/pisa.jpg",
+      "/assets/images/about/rome.jpg",
+      "/assets/images/about/scotland.jpg",
+      "/assets/images/about/wales.jpg",
+      "/assets/images/about/england.jpg",
+      "/assets/images/about/spain.jpg",
+      "/assets/images/about/greece.jpg",
+      "/assets/images/about/mexico.jpg",
+    ],
+    fullDescription:
+      "Growing up in California, I often traveled to Arizona and the East Coast to visit family, which sparked my love for exploring new places. Over the years, I’ve been fortunate to travel throughout the U.S. and internationally, including cruises to Canada and Alaska, Mexico, the Mediterranean, and the British Isles. I’ve also visited countries such as China, Jamaica, and the Dominican Republic. Experiencing different cultures, histories, and landscapes has broadened my perspective and continues to inspire both my creativity and curiosity about the world."
+  },
 
   {
     id: "interests",
     title: "Interests",
-    description: "Photography, hiking, philosophy, movies, travel, and marketing",
+    description: "Hiking, philosophy, movies, travel, and marketing",
     image: "/assets/images/about/flower.jpg",
     images: [
       "/assets/images/about/poppies.jpg",
@@ -80,6 +80,6 @@ export const aboutCategories: AboutCategory[] = [
       "/assets/images/about/bench.jpg",
       "/assets/images/about/lake.jpg"
     ],
-    fullDescription: "I’ve always loved capturing moments through photography, which deepened when I received my first camera at 20. My passion for hiking and skiing fuels my love for nature photography. Beyond this, I enjoy exploring philosophy and analyzing movies, often diving into their deeper meanings and themes. My marketing minor helps me understand how different fields intersect with technology. This blend of interests shapes my curiosity and creativity both personally and professionally."
+    fullDescription: "I enjoy spending time outdoors through hiking and skiing, especially when exploring scenic places and nature. Beyond that, I love diving into philosophy and analyzing movies for their deeper meanings, themes, and storytelling techniques. My marketing minor has also given me an appreciation for how creativity, psychology, and technology intersect in everyday life. Altogether, these interests continue to shape both my curiosity and creative perspective."
   }
 ];

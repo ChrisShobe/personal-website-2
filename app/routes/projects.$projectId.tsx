@@ -1,102 +1,58 @@
-import React from "react";
 import { useParams, Link } from "react-router";
 import { projects } from "../data/projects";
 import "../project.css";
 import Navigation from "../components/Navigation.js";
+import PageHero from "../components/PageHero.js";
+import TagRow from "../components/TagRow.js";
+import ProjectLinks from "../components/ProjectLinks.js";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
   const project = projects.find(p => p.id === projectId);
+
   if (!project) {
     return (
-      <div>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="mailto:chrisshobe2000@gmail.com">
-            <i className="fas fa-envelope"></i>
-          </a>
-          <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-file-alt"></i>
-          </a>        </div>
-          
+      <div className="page-shell">
         <Navigation currentPage="projects" />
-
-        <div className="header">
-          <div className="header-content">
-            <h1>Project Not Found</h1>
-            <p>The project you're looking for doesn't exist.</p>
-            <Link to="/projects" className="back-button">Back to All Projects</Link>
-          </div>
+        <div className="detail-shell">
+          <h1>Project Not Found</h1>
+          <p>The project you're looking for doesn't exist.</p>
+          <Link to="/projects" className="project-back-link">← Back to All Projects</Link>
         </div>
       </div>
     );
   }
+
   return (
-    <div>
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i>
-        </a>
-        <a href="mailto:chrisshobe2000@gmail.com">
-          <i className="fas fa-envelope"></i>
-        </a>
-        <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i className="fas fa-file-alt"></i>
-        </a>      </div>
-        
+    <div className="page-shell page-fade-in">
       <Navigation currentPage="projects" />
 
-      <Link to="/projects" className="back-button">← Back to All Projects</Link><div className="project-detail">        {(project.award || project.projectType) && (
-          <div className="project-detail-badges">
-            <div>
-              {project.award && (
-                <span className="badge award">{project.award}</span>
-              )}
-            </div>
-            <div>
-              {project.projectType && (
-                <span className="badge project-type">{project.projectType}</span>
-              )}
-            </div>
-          </div>
-        )}        <div className="project-detail-content">
-          <div className="project-detail-header">
-            <img src={project.image} alt={`${project.title} logo`} className="project-detail-title-image" />
-            <h1>{project.title}</h1>
-          </div>
-          
-          <div className="project-meta">
-            <div className="project-links">
-              {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              )}
-              {project.devpost && (
-                <>
-                  {project.github && " | "}
-                  <a href={project.devpost} target="_blank" rel="noopener noreferrer">
-                    Devpost
-                  </a>
-                </>
-              )}            </div>
-            <div className="project-tags">
-              {project.tags && project.tags.map((tag: string) => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>          </div>
+      <PageHero kicker={project.projectType ?? "Project"} subtitle={project.description}>
+        <span style={{ color: "var(--teal-soft)" }}>{project.title}</span>
+      </PageHero>
 
-          <div className="project-description">
-            <h3>About This Project</h3>
-            <p>{project.fullDescription}</p>
+      <div className="detail-shell">
+        <Link to="/projects" className="project-back-link">← All Projects</Link>
+
+        <div className="detail-card">
+          <div className="detail-grid">
+            <div className="detail-panel">
+              {project.award && (
+                <span className="project-award-full">★ {project.award}</span>
+              )}
+              <h3 className="project-section-heading">About This Project</h3>
+              <p>{project.fullDescription}</p>
+            </div>
+
+            <div className="detail-panel">
+              {(project.github || project.devpost || project.writeup) && (
+                <div className="project-links-section">
+                  <ProjectLinks github={project.github} devpost={project.devpost} writeup={project.writeup} />
+                </div>
+              )}
+
+              {project.tags && project.tags.length > 0 && <TagRow tags={project.tags} />}
+            </div>
           </div>
         </div>
       </div>

@@ -1,151 +1,98 @@
 @import "./home.css";
 
-.about-images {
+.about-description-panel {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 244, 228, 0.08);
+  padding: 1.3rem;
+}
+
+/* ── Classified / Polaroid photo grid ── */
+.classified-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  min-height: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2.5rem 2rem;
+  padding: 1rem 0.5rem 3rem;
 }
 
-.about-images img {
+.classified-photo {
+  position: relative;
+  background: #f4ede0;
+  padding: 8px 8px 46px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Varied rotation per photo */
+.classified-photo:nth-child(6n+1) { transform: rotate(-3deg); }
+.classified-photo:nth-child(6n+2) { transform: rotate(2.5deg); }
+.classified-photo:nth-child(6n+3) { transform: rotate(-1.5deg); }
+.classified-photo:nth-child(6n+4) { transform: rotate(4deg); }
+.classified-photo:nth-child(6n+5) { transform: rotate(-2.5deg); }
+.classified-photo:nth-child(6n)   { transform: rotate(3.5deg); }
+
+.classified-photo:hover {
+  transform: rotate(0deg) scale(1.07);
+  z-index: 20;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.72), 0 6px 18px rgba(0, 0, 0, 0.42);
+}
+
+.classified-photo img {
+  display: block;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid rgba(179, 64, 224, 0.2);
+  height: auto;
 }
 
-.about-images img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(179, 64, 224, 0.4);
-  border-color: #40E0D0;
-}
-
-/* Project header with small image next to title */
-.project-header {
+.classified-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem; /* Add top margin to account for badges */
+  justify-content: center;
+  padding: 0 6px;
+  font-family: var(--mono);
+  font-size: 0.38rem;
+  color: rgba(50, 38, 25, 0.55);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  word-break: break-all;
 }
 
-.project-list-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.project-header h3 {
-  margin: 0;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .about-content {
-    padding: 0 1rem;
-  }
-  
-  .about-section {
-    padding: 1.5rem 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .about-section h3 {
-    font-size: 1.5rem;
-  }
-  
-  .about-images {
+@media (max-width: 600px) {
+  .classified-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    min-height: 250px;
-  }
-  
-  /* Align about page text with image and title on mobile */
-  .project p {
-    text-align: left;
-    margin-left: 61px; /* 50px image width + 11px gap = 61px */
-    padding-left: 0;
+    gap: 2rem 1.5rem;
   }
 }
 
-/* Enhanced Mobile Responsiveness for About Page */
-@media (max-width: 480px) {
-  .about-content {
-    padding: 0 0.5rem;
-  }
-  
-  .about-section {
-    padding: 1rem 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .about-section h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-section p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  
-  .about-images {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    min-height: 150px;
-  }
-  
-  .projects-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 0.5rem;
-  }
-  
-  .project {
-    padding: 1rem;
-  }
-  
-  .project-header {
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .project-list-image {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .project-header h3 {
-    font-size: 1.1rem;
-  }
-  
-  /* Align about page text with smaller image on mobile */
-  .project p {
-    text-align: left;
-    margin-left: 48px; /* 40px image width + 8px gap = 48px */
-    padding-left: 0;
-  }
-  
-  .project-detail {
-    padding: 0 0.5rem;
-  }
-  
-  .project-detail-header {
-    gap: 1rem;
-    margin-bottom: 1rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .project-detail-title-image {
-    width: 50px;
-    height: 50px;
-  }
+/* ── Redaction overlay ── */
+.redact-bar {
+  position: absolute;
+  inset: 0;
+  background: #080b12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: rgba(255, 244, 228, 0.12);
+  z-index: 10;
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+@media (hover: hover) {
+  .vault-card:hover .redact-bar { transform: scaleX(0); }
+}
+
+.vault-card.is-expanded .redact-bar { transform: scaleX(0); }
+

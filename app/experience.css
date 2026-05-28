@@ -1,391 +1,181 @@
 @import "./home.css";
 
-/* Experience Detail Page Styles */
-.experience-detail {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-    position: relative;
+/* ── Circuit Timeline ── */
+.circuit-timeline-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
 }
 
-.experience-detail-content {
-    animation: fadeIn 1s ease-in-out;
-    padding-top: 3rem;
-    padding: 0.5rem 1rem;
+.circuit-timeline {
+  position: relative;
+  padding-left: 3rem;
 }
 
-.experience-detail-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+.circuit-line {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: rgba(137, 210, 220, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
-.experience-detail-header h1 {
-    color: #40E0D0;
-    margin: 0;
-    font-size: 3rem;
+.circuit-line-fill {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, var(--teal), var(--purple));
+  transition: height 0.25s ease;
+  border-radius: 2px;
 }
 
-.experience-position {
-    color: #B340E0;
-    margin: 0.5rem 0 0 0;
-    font-size: 1.5rem;
-    font-weight: 600;
+.circuit-node-group {
+  position: relative;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.experience-detail-title-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
+.circuit-node-group.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.experience-dates {
-    margin-bottom: 0;
+.circuit-node-dot {
+  position: absolute;
+  left: -2.38rem;
+  top: 1.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(137, 210, 220, 0.2);
+  border: 2px solid rgba(137, 210, 220, 0.35);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.experience-dates .date {
-    color: #B340E0;
-    font-weight: 600;
-    font-size: 0.0rem;
-    display: block;
-    margin-bottom: 1rem;
+.circuit-node-group.is-visible .circuit-node-dot {
+  background: var(--teal);
+  border-color: var(--teal-soft);
+  box-shadow: 0 0 12px rgba(35, 181, 211, 0.5);
 }
 
-.experience-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.circuit-node-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(155deg, rgba(13, 17, 28, 0.9), rgba(22, 29, 48, 0.72));
+  border: 1px solid rgba(137, 210, 220, 0.14);
+  border-radius: 18px;
+  padding: 1.2rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.experience-tags .tag {
-    background-color: rgba(102, 255, 240, 0.2);
-    color: #66FFF0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
+.circuit-node-card:hover {
+  border-color: rgba(35, 181, 211, 0.38);
+  box-shadow: 0 12px 36px rgba(3, 5, 12, 0.45);
 }
 
-.experience-description {
-    margin-top: 2rem;
+.circuit-node-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.experience-description h3 {
-    color: #c0fff9;
-    margin-bottom: 1rem;
+.circuit-node-date {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--purple);
+  letter-spacing: 0.04em;
 }
 
-.experience-description p {
-    color: #ffffff;
-    line-height: 1.8;
-    font-size: 1.1rem;
+.circuit-node-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-soft);
+  background: rgba(35, 181, 211, 0.08);
+  border: 1px solid rgba(137, 210, 220, 0.16);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
 }
 
-.experience-bottom-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem auto;
-    display: block;
-    object-fit: cover;
+.circuit-node-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
 }
 
-/* Experience roles section */
-.experience-roles {
-    margin-top: 2rem;
+.circuit-node-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px;
+  border: 1px solid rgba(137, 210, 220, 0.1);
 }
 
-.experience-roles h3 {
-    color: #c0fff9;
-    margin-bottom: 1.5rem;
+.circuit-node-company {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  color: var(--text);
 }
 
+.circuit-node-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .circuit-timeline { padding-left: 2.2rem; }
+  .circuit-node-dot { left: -1.85rem; }
+  .circuit-line { left: 0.6rem; }
+}
+
+/* ── Experience Detail (shared with project.css pattern) ── */
 .role-item {
-    background-color: rgba(179, 64, 224, 0.1);
-    border: 1px solid rgba(179, 64, 224, 0.2);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+  background: rgba(155, 126, 190, 0.08);
+  border: 1px solid rgba(155, 126, 190, 0.18);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 0.9rem;
 }
 
 .role-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .role-header h4 {
-    color: #66FFF0;
-    margin: 0;
-    font-size: 1.1rem;
+  color: var(--teal-soft);
+  margin: 0;
+  font-size: 1rem;
 }
 
 .role-date {
-    color: #B340E0;
-    font-weight: 600;
-    font-size: 0.9rem;
+  color: var(--purple);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
 }
 
 .role-description {
-    color: #ccc;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Badge styles for experience items */
-.project-badges {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.badge.experience {
-    background: linear-gradient(134deg, #b340e0, #40E0D0);
-    color: #ffffff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(179, 64, 224, 0.3);
-}
-
-.badge.date {
-    background-color: rgba(179, 64, 224, 0.2);
-    color: #B340E0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(179, 64, 224, 0.3);
-}
-
-/* Back button styling */
-.back-button {
-    display: inline-block;
-    margin: 1rem 2rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(179, 64, 224, 0.2);
-    color: #b340e0;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: rgba(179, 64, 224, 0.3);
-    color: #df8fff;
-}
-
-/* Project header with small image next to title */
-.project-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem; /* Add top margin to account for badges */
-}
-
-.project-list-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.project-header h3 {
+  color: var(--muted);
+  line-height: 1.6;
   margin: 0;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .experience-detail {
-        padding: 0 1rem;
-    }
-    
-    .project {
-        overflow: visible !important;
-    }
-    
-    .project-badges {
-        position: static;
-        margin-bottom: 0.5rem;
-        justify-content: flex-start;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-    }
-    
-    .project-header {
-        margin-top: 0.25rem;
-        margin-bottom: 1rem;
-    }
-    
-    .project-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-        margin-left: 0;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: visible;
-    }
-      .project-tags {
-        width: calc(100% - 2rem);
-        max-width: calc(100vw - 4rem);
-        box-sizing: border-box;
-        overflow: visible;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25rem;
-        padding-right: 1rem;
-    }
-    
-    .project-tags .tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.6rem;
-        white-space: nowrap;
-        max-width: calc(50% - 0.125rem);
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .badge.experience,
-    .badge.date {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.6rem;
-        white-space: nowrap;
-    }
-}
-
-/* Enhanced Mobile Responsiveness for Experience */
-@media (max-width: 480px) {
-  .project {
-    padding: 1rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: visible !important;
-  }
-  
-  .project-header {
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    margin-top: 0.25rem;
-  }
-  
-  .project-list-image {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .project-header h3 {
-    font-size: 1.1rem;
-  }
-  
-  .project-badges {
-    position: static;
-    margin-bottom: 0.5rem;
-    justify-content: flex-start;
-    gap: 0.25rem;
-    flex-wrap: wrap;
-  }
-  
-  .project-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-left: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: visible;
-  }
-    .project-tags {
-    width: calc(100% - 1rem);
-    max-width: calc(100vw - 3rem);
-    box-sizing: border-box;
-    overflow: visible;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    padding-right: 0.5rem;
-  }
-  
-  .project-tags .tag {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-    white-space: nowrap;
-    flex-shrink: 1;
-    max-width: calc(45% - 0.125rem);
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .badge.experience,
-  .badge.date {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-    white-space: nowrap;
-  }
-    .experience-detail {
-    padding: 0 0.5rem;
-  }
-  
-  .experience-detail-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .experience-detail-header h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  
-  .experience-position {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0.25rem 0 0 0;
-  }
-  
-  .experience-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .experience-image {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .back-button {
-    margin: 0.5rem 0;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .experience-bottom-image {
-    height: 200px;
-    margin-top: 1.5rem;
-  }
+  text-align: left;
+  font-size: 0.9rem;
 }

@@ -1,64 +1,83 @@
-import React from "react";
 import { Link } from "react-router";
 import { experience } from "../data/experience.js";
 import type { Experience } from "../data/experience.js";
 import "../experience.css";
 import "../project.css";
+import { useEffect, useRef } from "react";
 import Navigation from "../components/Navigation.js";
+import PageHero from "../components/PageHero.js";
+import TagRow from "../components/TagRow.js";
 
 export default function Experience() {
+  const timelineRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const fill = document.querySelector('.circuit-line-fill') as HTMLElement | null;
+    const timeline = timelineRef.current;
+
+    const updateFill = () => {
+      if (!timeline || !fill) return;
+      const rect = timeline.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1,
+        (-rect.top + window.innerHeight * 0.65) / rect.height
+      ));
+      fill.style.height = `${progress * 100}%`;
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.2 });
+
+    const nodes = document.querySelectorAll('.circuit-node-group');
+    nodes.forEach(n => observer.observe(n));
+    window.addEventListener('scroll', updateFill, { passive: true });
+    updateFill();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', updateFill);
+    };
+  }, []);
+
   return (
-    <div>      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i>
-        </a>
-        <a href="mailto:chrisshobe2000@gmail.com">
-          <i className="fas fa-envelope"></i>
-        </a>
-        <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i className="fas fa-file-alt"></i>
-        </a>      </div>
-        
+    <div className="page-shell page-fade-in">
       <Navigation currentPage="experience" />
 
-      <div className="header">
-        <div className="header-content">
-          <h1>
-            <span style={{ color: "#b340e0" }}>My</span>{" "}
-            <span style={{ color: "#40E0D0" }}>Experience</span>
-          </h1>
-          <p>
-            Click on a role to learn more about my internships and leadership experience across software engineering, cybersecurity, student organization leadership, and DEI advocacy.
-          </p>
-        </div>
-      </div>      <div className="projects-container">        {experience.map((exp: Experience) => (
-          <Link key={exp.id} to={`/experience/${exp.id}`} className="project-link">            <div className="project">              <div className="project-badges">
-                <div>
-                  {exp.title && (
-                    <span className="badge experience">{exp.title}</span>
-                  )}
-                </div>
-                <div>
-                  {exp.startDate && (
-                    <span className="badge date">{exp.startDate} - {exp.endDate || "Present"}</span>
-                  )}
-                </div>
-              </div><div className="project-header">
-                <img src={exp.image} alt={`${exp.company} logo`} className="project-list-image" />
-                <h3>{exp.company}</h3>
-              </div>              <div className="project-meta">
-                <div className="project-tags">
-                  {exp.tags && exp.tags.map((tag: string) => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
-                </div>
+      <PageHero kicker="Career archive" subtitle="Click a role to learn more about internships, leadership, and DEI advocacy.">
+        <span style={{ color: "var(--purple)" }}>My</span>{" "}
+        <span style={{ color: "var(--teal-soft)" }}>Experience</span>
+      </PageHero>
+
+      <section className="circuit-timeline-section">
+        <div className="circuit-timeline" ref={timelineRef}>
+          <div className="circuit-line">
+            <div className="circuit-line-fill" />
+          </div>
+          {experience.map((exp: Experience, i: number) => (
+            <div key={exp.id} className="circuit-node-group" data-index={i}>
+              <div className="circuit-node-dot" />
+              <div className="circuit-node-content">
+                <Link to={`/experience/${exp.id}`} className="circuit-node-card">
+                  <div className="circuit-node-meta">
+                    <span className="circuit-node-date">{exp.startDate} — {exp.endDate ?? "Present"}</span>
+                    <span className="circuit-node-badge">{exp.title}</span>
+                  </div>
+                  <div className="circuit-node-main">
+                    <img src={exp.image} alt={exp.company} className="circuit-node-logo" />
+                    <div>
+                      <h3 className="circuit-node-company">{exp.company}</h3>
+                      <p className="circuit-node-description">{exp.fullDescription}</p>
+                    </div>
+                  </div>
+                  {exp.tags && exp.tags.length > 0 && <TagRow tags={exp.tags} />}
+                </Link>
               </div>
             </div>
-          </Link>
-        ))}</div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

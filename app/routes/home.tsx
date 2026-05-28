@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import "../home.css";
 import meImg from "/assets/images/home/me.png";
 import projectImg from "/assets/images/home/projects.jpg";
@@ -5,62 +6,115 @@ import experienceImg from "/assets/images/home/experience.jpg";
 import aboutImg from "/assets/images/home/sky.jpg";
 import Navigation from "../components/Navigation.js";
 
+const PROMPT = "Welcome! I'm Chris Shobe";
+
 const Home = () => {
+  const [typed, setTyped] = useState("");
+  const [done, setDone] = useState(false);
+  const [glowIndex, setGlowIndex] = useState(0);
+  const cardRefs = [
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+    useRef<HTMLAnchorElement>(null),
+  ];
+
+  useEffect(() => {
+    let i = 0;
+    const t = setInterval(() => {
+      i++;
+      setTyped(PROMPT.slice(0, i));
+      if (i >= PROMPT.length) { clearInterval(t); setDone(true); }
+    }, 42);
+    return () => clearInterval(t);
+  }, []);
+
+  useEffect(() => {
+    const t = setInterval(() => setGlowIndex(i => (i + 1) % 3), 2500);
+    return () => clearInterval(t);
+  }, []);
+
   return (
-    <div>
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/chris-shobe/" target="_blank" rel="noopener noreferrer">
-          <i className = "fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/ChrisShobe" target="_blank" rel="noopener noreferrer">
-          <i className = "fab fa-github"></i>
-        </a>
-        <a href="mailto:chrisshobe2000@gmail.com">
-          <i className = "fas fa-envelope"></i>
-        </a>
-        <a href="/Chris Shobe Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i className = "fas fa-file-alt"></i>
-        </a>
-      </div>
-        
+    <div className="page-shell page-fade-in">
       <Navigation currentPage="home" />
 
-      <div className="header">
-        <div className="header-content">
-          <img className="circle-image" src={meImg} alt="Me" />
-          <div className="header-content-body">
-            <h1>
-              <span style={{ color: "#b340e0" }}>Welcome!</span>{" "}
-              <span style={{ color: "#df8fff" }}>I'm</span>{" "}
-              <span style={{ color: "#40E0D0" }}>Chris Shobe</span>
+      <header className="page-hero page-hero--portrait">
+        <div className="hero-grid">
+          <div className="hero-portrait">
+            <img className="circle-image" src={meImg} alt="Portrait of Chris Shobe" />
+          </div>
+          <div className="hero-copy">
+            <div className="hero-kicker terminal-action-kicker">
+              <span className="terminal-root-prefix">[root@cshobe ~]$</span> open --vault
+            </div>
+            <h1 className="terminal-h1">
+              <span className="terminal-prompt-prefix">cshobe@portfolio:~$</span>{" "}
+              <span className="terminal-typed-text">{typed}</span>
+              {!done && <span className="terminal-cursor">▋</span>}
             </h1>
-            <p>
+            <p className="page-subtitle">
               I'm a junior at Santa Clara University studying Computer Science and Engineering with a Marketing minor, passionate about building inclusive, impactful tech through software, cybersecurity, and full-stack development.
             </p>
+            <div className="terminal-disciplines">
+              <span>software engineering</span>
+              <span>cybersecurity</span>
+              <span>student leadership</span>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      <a href="/projects">
-        <div className="link-box">
-          <img src={projectImg} alt="Project Image" />
-          <div className="centered">My Projects</div>
-        </div>
-      </a>
+      <section className="vault-section vault-section--no-locks">
+        <div className="vault-hint">Scroll sideways and use your cursor as the key to open each room.</div>
+        <div className="vault-rail">
+          <a href="/projects" ref={cardRefs[0]} className={`vault-card${glowIndex === 0 ? " glow-active" : ""}`}>
+            <div className="vault-card-shell">
+              <div className="vault-card-body">
+                <div className="vault-topline">
+                  <span className="vault-pill">01</span>
+                  <span className="vault-ribbon">Projects</span>
+                </div>
+                <h2 className="vault-heading">Project Vault</h2>
+                <p className="vault-copy">AI, full-stack, cybersecurity, accessibility, and game design work gathered into one horizontal archive.</p>
+                <div className="vault-lock-window">
+                  <img src={projectImg} alt="Preview of projects" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              </div>
+            </div>
+          </a>
 
-      <a href="/experience">
-        <div className="link-box">
-          <img src={experienceImg} alt="Experience Image" />
-          <div className="centered">My Experience</div>
-        </div>
-      </a>
+          <a href="/experience" ref={cardRefs[1]} className={`vault-card${glowIndex === 1 ? " glow-active" : ""}`}>
+            <div className="vault-card-shell">
+              <div className="vault-card-body">
+                <div className="vault-topline">
+                  <span className="vault-pill">02</span>
+                  <span className="vault-ribbon">Experience</span>
+                </div>
+                <h2 className="vault-heading">Experience Vault</h2>
+                <p className="vault-copy">Internships and leadership roles presented like a timeline of locked chambers.</p>
+                <div className="vault-lock-window">
+                  <img src={experienceImg} alt="Preview of experience" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              </div>
+            </div>
+          </a>
 
-      <a href="/about">
-        <div className="link-box">
-          <img src={aboutImg} alt="About Image" />
-          <div className="centered about-text">About Me Beyond CS</div>
+          <a href="/about" ref={cardRefs[2]} className={`vault-card${glowIndex === 2 ? " glow-active" : ""}`}>
+            <div className="vault-card-shell">
+              <div className="vault-card-body">
+                <div className="vault-topline">
+                  <span className="vault-pill">03</span>
+                  <span className="vault-ribbon">Beyond CS</span>
+                </div>
+                <h2 className="vault-heading">Beyond CS Vault</h2>
+                <p className="vault-copy">Music, art, travel, and personal interests arranged as a more exploratory visual space.</p>
+                <div className="vault-lock-window">
+                  <img src={aboutImg} alt="Preview of beyond CS" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
+      </section>
     </div>
   );
 };

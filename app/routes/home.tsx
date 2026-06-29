@@ -52,7 +52,7 @@ const Home = () => {
               {!done && <span className="terminal-cursor">▋</span>}
             </h1>
             <p className="page-subtitle">
-              I'm a junior at Santa Clara University studying Computer Science and Engineering with a Marketing minor, passionate about building inclusive, impactful tech through software, cybersecurity, and full-stack development.
+              I'm a Computer Science and Engineering student at Santa Clara University with a minor in Marketing, passionate about building secure, scalable, and impactful technology through software engineering, cybersecurity, and AI.
             </p>
             <div className="terminal-disciplines">
               <span>software engineering</span>

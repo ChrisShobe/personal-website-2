@@ -18,111 +18,129 @@ export interface Experience {
 }
 
 export const experience: Experience[] = [
-  {
-    id: "capitalone",
-    title: "Cyber Security Intern",
-    company: "Capital One",
-    image: "/assets/images/experience/capital-one-logo.png",
-    startDate: "June 2026",
-    endDate: "Aug 2026",
-    tags: ["Enterprise Cybersecurity", "Security Engineering", "Threat Analysis"],
-    fullDescription: "Selected through a competitive process for Capital One's Summer 2026 cybersecurity internship, where I will focus on data visualization and operational visibility to improve detection, analysis, and response across enterprise security systems.",
-    bottomImage: "/assets/images/experience/lifeatC1.png",
-    roles: [
-      {
-        title: "Cyber Security Intern",
-        date: "June 2026 — Aug 2026",
-        description: "Working on data visualization and operational visibility to surface actionable security insights and support faster incident response across enterprise systems."
-      }
-    ]
-  },
-  {
-    id: "wicys",
-    title: "Vice President",
-    company: "Women in CyberSecurity",
-    image: "/assets/images/experience/wicys-logo.png",
-    startDate: "Oct 2024",
-    endDate: "Present",
-    tags: ["Cybersecurity Community Building", "Strategic Leadership", "Industry Engagement"],
-    fullDescription: "Grew from Public Relations to Vice President in WiCyS, leading strategy, programming, and partnerships that expand cybersecurity opportunities and career development for members.",
-    bottomImage: "/assets/images/experience/wicys.jpg",
-    roles: [
-      {
-        title: "Vice President",
-        date: "Apr 2026 – Present",
-        description: "I lead organizational strategy, events, and cybersecurity-focused initiatives for members. I partner with industry organizations, such as CrowdStrike and WiCyS Silicon Valley, to host speaker events and career development sessions."
-      },
-      {
-        title: "Event Coordinator",
-        date: "May 2025 – Apr 2026",
-        description: "I organized and led weekly SCU WiCyS meetings and events, managed logistics like venues, supplies, and PR coordination. I guided presentations or delegated tasks to ensure smooth execution, and collaborated with other student groups to host interdisciplinary events that expand our reach."
-      },
-      {
-        title: "Public Relations",
-        date: "Oct 2024 – May 2025",
-        description: "As one of the founding members of SCU WiCyS, I managed the chapter's communication strategy by creating newsletters and flyers and running social media campaigns on Instagram and LinkedIn. These efforts boosted event visibility and engagement and significantly increased awareness of our cybersecurity initiatives."
-      }
-    ]
-  },
-  {
-    id: "acm",
-    title: "President",
-    company: "Association for Computing Machinery",
-    image: "/assets/images/experience/acm-logo.png",
-    startDate: "Oct 2023",
-    endDate: "Present",
-    tags: ["Organization Leadership", "Technical Program Management", "Cross-Functional Collaboration"],
-    fullDescription: "Progressed through multiple ACM leadership roles to President, directing strategy, operations, and programming for SCU's largest computing organization while scaling events, partnerships, and member engagement.",
-    roles: [ 
-      {
-        title: "President",
-        date: "Apr 2026 – Present",
-        description: "Lead and manage SCU's largest computing organization by setting strategic direction, delegating executive board responsibilities, and overseeing workshops, hackathons, and partnerships."
-      },  
-      {
-        title: "Treasurer",
-        date: "Apr 2025 – Apr 2026",
-        description: "Managed ACM's budget and event spending, coordinated funding with university stakeholders, and maintained transparent reimbursement and planning processes aligned with campus policy."
-      },  
-      {
-        title: "DEI Chair",
-        date: "Apr 2024 – Apr 2025",
-        description: "Represented ACM in IDEAS and led DEI initiatives with organizations including NSBE, SHPE, and SWE to strengthen inclusion and support underrepresented students in computing."
-      },
-      {
-        title: "Underclassmen Representative",
-        date: "Oct 2023 – Apr 2024",
-        description: "As ACM's sole first-year board member, supported marketing, social media, and event planning while building early leadership experience through workshops and hackathon execution."
-      },
-    ],
-    bottomImage: "/assets/images/experience/acm-board.jpg"
-  },
-  {
-    id: "palomar",
-    title: "Cyber Security Associate",
-    company: "Palomar Specialty Insurance",
-    image: "/assets/images/experience/palomar-logo.png",
-    startDate: "June 2024",
-    endDate: "Dec 2025",
-    tags: ["Security Automation", "Identity & Access Management", "Vulnerability Management"],
-    fullDescription: "Progressed from Software Engineering Intern to Cybersecurity Associate at Palomar, delivering automation, IAM, and security assessment work that improved internal operations and reduced manual security overhead.",
-    bottomImage: "/assets/images/experience/Palomar2025.jpg",
-    roles: [
-      {
-        title: "Security Associate",
-        date: "Sept 2025 - December 2025",
-        description: "Promoted from Cybersecurity Intern to Associate in recognition of strong technical execution and measurable contributions across automation and security operations."
-      },
-      {
-        title: "Cyber Security Intern",
-        date: "June 2025 - Sept 2025",
-        description: "Built and deployed PowerShell automation through Intune for endpoint compliance reporting in Azure, designed Okta IAM workflows to reduce manual access tasks, and supported audits, policy reviews, and security health assessments across enterprise systems."
-      },
-      {
-        title: "Software Engineer Intern",
-        date: "June 2024 - Aug 2024",
-        description: "Built and improved internal tools using React, TypeScript, and modern web workflows, and developed Java automation with Spring Boot and Selenium to streamline testing and operational tasks for cross-functional teams."
-      }
-    ]
-  }
+{
+id: "capitalone",
+title: "Cybersecurity Intern",
+company: "Capital One",
+image: "/assets/images/experience/capital-one-logo.png",
+startDate: "June 2026",
+endDate: "Aug 2026",
+tags: ["Full-Stack Engineering", "Enterprise Security", "React", "Node.js", "AWS"],
+fullDescription:
+"Built a production-ready enterprise application used to streamline secure operational workflows. Developed the application's architecture, implemented secure authentication and authorization, automated deployment pipelines, and engineered scalable backend services while following enterprise security best practices.",
+bottomImage: "/assets/images/experience/lifeatC1.png",
+roles: [
+{
+title: "Cybersecurity Intern",
+date: "June 2026 — Aug 2026",
+description:
+"Engineered a full-stack enterprise application using React, Node.js, and Express. Designed the application's architecture, implemented a secure role-based workflow with SSO integration, built authenticated API services, automated CI/CD pipelines, secured cloud IAM permissions, and developed comprehensive accessibility and unit test suites."
+}
+]
+},
+
+{
+id: "palomar",
+title: "Cybersecurity Associate",
+company: "Palomar Specialty Insurance",
+image: "/assets/images/experience/palomar-logo.png",
+startDate: "June 2024",
+endDate: "Dec 2025",
+tags: ["Security Automation", "Identity & Access Management", "Software Engineering"],
+fullDescription:
+"Advanced from Software Engineering Intern to Cybersecurity Associate, contributing across software development, endpoint automation, identity management, and enterprise security operations while improving operational efficiency through automation.",
+bottomImage: "/assets/images/experience/Palomar2025.jpg",
+roles: [
+{
+title: "Cybersecurity Associate",
+date: "Sept 2025 – Dec 2025",
+description:
+"Promoted from intern after delivering automation and security improvements. Audited Active Directory environments, reviewed penetration testing findings, managed privileged access risks, investigated security alerts across cloud platforms, and validated evidence for compliance initiatives."
+},
+{
+title: "Cybersecurity Intern",
+date: "June 2025 – Sept 2025",
+description:
+"Developed PowerShell and Bash automation deployed through Microsoft Intune to monitor endpoint compliance. Designed Okta identity workflows to automate group assignments and lifecycle management while supporting enterprise security operations and cloud governance."
+},
+{
+title: "Software Engineering Intern",
+date: "June 2024 – Aug 2024",
+description:
+"Enhanced internal business applications using Next.js, React, TypeScript, and Node.js. Built automated testing solutions with Java, Spring Boot, Selenium, and Pega while streamlining internal workflows for the Claims organization."
+}
+]
+},
+
+{
+id: "acm",
+title: "President",
+company: "Association for Computing Machinery",
+image: "/assets/images/experience/acm-logo.png",
+startDate: "Oct 2023",
+endDate: "Present",
+tags: ["Leadership", "Community Building", "Technical Events"],
+fullDescription:
+"Progressed through four executive board positions before becoming President of Santa Clara University's ACM chapter. Lead strategy, operations, industry partnerships, and technical programming for one of the university's largest student organizations.",
+bottomImage: "/assets/images/experience/acm-board.jpg",
+roles: [
+{
+title: "President",
+date: "Apr 2026 – Present",
+description:
+"Lead the organization's strategic direction, oversee the executive board, coordinate technical workshops and hackathons, and build partnerships with industry and campus organizations to expand opportunities for members."
+},
+{
+title: "Treasurer",
+date: "Apr 2025 – Apr 2026",
+description:
+"Managed budgeting, funding requests, reimbursements, and financial planning while ensuring responsible allocation of resources across technical events and initiatives."
+},
+{
+title: "DEI Chair",
+date: "Apr 2024 – Apr 2025",
+description:
+"Partnered with organizations including NSBE, SHPE, and SWE to organize collaborative events that promoted diversity and increased participation in computing."
+},
+{
+title: "Underclassmen Representative",
+date: "Oct 2023 – Apr 2024",
+description:
+"Supported event planning, outreach, and marketing while serving as the only first-year member of ACM's executive board."
+}
+]
+},
+
+{
+id: "wicys",
+title: "Vice President",
+company: "Women in CyberSecurity",
+image: "/assets/images/experience/wicys-logo.png",
+startDate: "Oct 2024",
+endDate: "Present",
+tags: ["Cybersecurity Leadership", "Industry Partnerships", "Community"],
+fullDescription:
+"Helped establish and grow Santa Clara University's WiCyS chapter, progressing from founding Public Relations officer to Vice President while expanding professional development, technical programming, and industry engagement.",
+bottomImage: "/assets/images/experience/wicys.jpg",
+roles: [
+{
+title: "Vice President",
+date: "Apr 2026 – Present",
+description:
+"Drive chapter strategy, coordinate executive board initiatives, and build partnerships with organizations including CrowdStrike and WiCyS Silicon Valley to deliver technical talks, networking opportunities, and career development events."
+},
+{
+title: "Event Coordinator",
+date: "May 2025 – Apr 2026",
+description:
+"Planned and executed weekly meetings, workshops, and speaker events while coordinating logistics, communications, and collaborations with student organizations across campus."
+},
+{
+title: "Public Relations",
+date: "Oct 2024 – May 2025",
+description:
+"As a founding officer, managed newsletters, social media, and marketing campaigns that increased chapter visibility and student engagement during the organization's launch."
+}
+]
+}
 ];
